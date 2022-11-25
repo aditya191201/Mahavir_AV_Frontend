@@ -1,0 +1,67 @@
+import axios from 'axios';
+import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import './newtrial.css';
+import './ProductPage.css';
+function ImageSlider() {
+    const [isFetched,setIsFetched] = useState(false)
+    const imgs=[
+      {id:0, value: localStorage.getItem("img")},
+      {id:1, value: localStorage.getItem("image2")},
+      {id:2, value: localStorage.getItem("image3")},
+      
+    ]
+    
+    // (imgs[0] != null) ? (setIsFetched(true)) :(null)
+    
+    console.log("img in Image SLider",localStorage.getItem("img"))
+    const [wordData,setWordData]=useState(localStorage.getItem("img"))
+    // const [wordData,setWordData] = useState();
+    const [check,setCheck] = useState(false)
+
+
+
+    // useEffect(()=>{
+    //   if(!check){
+    //     console.log("In check:",localStorage.getItem("img"))
+    //     setWordData(localStorage.getItem("img"))
+    //     setCheck(true)
+    //   }
+    // })
+    
+    const handleClick=(index)=>{
+      console.log("handle click index:",index)
+      const wordSlider=imgs[index];
+      setWordData(wordSlider)
+    }
+    // if(imgs[0]!= null)
+    // {
+    //     setIsFetched(true)
+    // }
+    console.log("abc",wordData.value);
+    console.log("xyz",localStorage.getItem("image1"))
+    return (
+        <>
+        
+      <div className="app">
+        <div className="details">
+            {(imgs[0]!=null) ? (<img src={wordData.value} className="big-img" /> ) : (<h1>abcsd</h1>)}
+        
+        <div className='flex_row'>
+          {imgs.map((data,i)=>
+          <div className="thumbnail" key={i} >
+            <img className={wordData.id==i?"clicked":""} src={data.value} onClick={()=>handleClick(i)} height="70" width="100" />
+          </div>
+          )}
+        </div>
+        <div className="row">
+            <h1>{localStorage.getItem("productname")}</h1>
+        </div>
+        </div>
+      </div>
+      </>
+    );
+  }
+
+  export default ImageSlider;
