@@ -1,11 +1,5 @@
 import React from "react";
 import Animate1 from './Animate1';
-import Gif1 from './gif-1';
-import Animegif from '../assets/Anime1.mp4';
-import toon1 from '../assets/open.mp4';
-import toon2 from '../assets/verify.mp4';
-import toon3 from '../assets/cloud.mp4';
-import toon4 from '../assets/tickmark.mp4';
 import './Animate2.css';
 import './Animations.css';
 import './MycssSZ.css';
@@ -24,18 +18,18 @@ const Animate2=()=>{
                 <div>
                 <div className='gifs2' >
                             <div className='animedes1' >
-                                <video src={toon1} autoPlay loop muted />
+                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/open.mp4" autoPlay loop muted />
                             </div>
                             <div className='animedes1' >
-                                <video src={toon2} autoPlay loop muted />
+                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/verify.mp4" autoPlay loop muted />
                             </div>
                     </div>
                     <div className='gifs2' >
                             <div className='animedes1' >
-                                <video src={toon3} autoPlay loop muted />
+                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/cloud.mp4" autoPlay loop muted />
                             </div>
                             <div className='animedes1' >
-                                <video src={toon4} autoPlay loop muted />
+                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/tickmark.mp4" autoPlay loop muted />
                             </div>
                     </div>
                 </div>

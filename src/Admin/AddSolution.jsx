@@ -9,6 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import AddBenefits from './AddBenefits';
 import AddFeatures from './AddFeatures';
 import { useState } from 'react';
+import url from '../Url';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -77,7 +78,7 @@ function AddSolution(){
          "solimg3": img3,
          "productsused": products
    }
-   axios.post("http://localhost:8080/add-solution",
+   axios.post(url+"/add-solution",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

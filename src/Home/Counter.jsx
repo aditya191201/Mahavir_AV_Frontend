@@ -1,9 +1,8 @@
 import React from 'react';
 import './Counter.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee ,faPlane,faListCheck, faPerson, faCloud, faCartShopping} from '@fortawesome/free-solid-svg-icons';
+import { faListCheck, faPerson, faCloud, faCartShopping} from '@fortawesome/free-solid-svg-icons';
 import './Growth1.css';
-import growthv from '../assets/chart.mp4';
 import CountUp from 'react-countup';
 import { useState } from 'react';
 import ScrollTrigger from 'react-scroll-trigger';
@@ -44,7 +43,7 @@ const Counter = () => {
                     <h4>Products</h4>
                 </div>
                 <div >
-                         <video className="growthVid"src={growthv} autoPlay loop muted />
+                         <video className="growthVid"src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/chart.mp4" autoPlay loop muted />
                 </div>
             </div>
            

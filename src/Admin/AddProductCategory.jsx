@@ -6,6 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var title = ""
 var name = ""
 function AddProductCategory(){
@@ -31,7 +32,7 @@ const handleClick = () =>{
          "modelNum": title,
         
    }
-   axios.post("http://localhost:8080/productcategory",
+   axios.post(url+"/productcategory",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

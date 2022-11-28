@@ -1,12 +1,9 @@
 import React from 'react'
-import img1 from './polyimg4.png';
-import img2 from './polyimg1.webp';
-import img3 from './polyimg2.webp';
-import img4 from './polyimg3.webp';
 import './ProductFeatures.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import axios from 'axios';
+import url from '../Url';
 
 function ProductFeature () {
     const[products1, setProducts] = useState([])
@@ -15,7 +12,7 @@ function ProductFeature () {
   useEffect(()=>{
     if(!isProductFetched)
     {
-      axios.get("http://localhost:8080/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
+      axios.get(url+"/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
         if(response.status == 200){
           setProducts(response.data)
           setIsProductFetched(true)

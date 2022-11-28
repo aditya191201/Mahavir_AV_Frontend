@@ -6,6 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -38,7 +39,7 @@ const handleClick = () =>{
          "catimg": coverimg,
         
    }
-   axios.post("http://localhost:8080/solcategory",
+   axios.post(url+"/solcategory",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

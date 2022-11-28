@@ -2,13 +2,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Available_implementation_Carousel.css";
-import { data } from "./Available_implementation_data";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGreaterThan,faLessThan } from "@fortawesome/free-solid-svg-icons";
+import url from "../Url";
 const PreviousBtn = (props) => {
   // console.log(props);
   const { className, onClick } = props;
@@ -34,7 +34,7 @@ const[isSolutionFetched, setIsSolutionFetched] = useState(false)
 useEffect(()=>{
    if(!isSolutionFetched)
    {
-      axios.get("http://localhost:8080/getSolutions/"+localStorage.getItem('solname')).then(function(response){
+      axios.get(url+"/getSolutions/"+localStorage.getItem('solname')).then(function(response){
      if(response.status == 200){
        setSolution(response.data)
        setIsSolutionFetched(true)
@@ -59,7 +59,7 @@ useEffect(()=>{
         customPaging={(i) => {
           return (
             <div>
-              <img
+              {/* <img
                 src={data[i]}
                 alt=""
                 style={{
@@ -68,7 +68,7 @@ useEffect(()=>{
                   objectFit: "cover",
                   borderRadius: "10px",
                 }}
-              />
+              /> */}
             </div>
           );
         }}

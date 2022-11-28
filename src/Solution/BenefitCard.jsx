@@ -4,6 +4,7 @@ import BCard from './benefit-card-comp'
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
+import url from '../Url';
 
 function Card() {
 	const[solution,setSolution] = useState([])
@@ -11,7 +12,7 @@ function Card() {
    useEffect(()=>{
       if(!isSolutionFetched)
       {
-         axios.get("http://localhost:8080/getSolutions/"+localStorage.getItem('solname')).then(function(response){
+         axios.get(url+"/getSolutions/"+localStorage.getItem('solname')).then(function(response){
         if(response.status == 200){
           setSolution(response.data)
           setIsSolutionFetched(true)

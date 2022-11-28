@@ -8,6 +8,7 @@ import BCard from "../Solution/benefit-card-comp";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import './solcat.css';
+import url from "../Url";
 function Solcat() {
 
     const [solutioncategory, setSolutioncategory] = useState([])
@@ -15,7 +16,7 @@ function Solcat() {
     const navigate = useNavigate();
     useEffect(() => {
         if (!isSolutioncategoryFetched) {
-            axios.get("http://localhost:8080/getsolcategorydetail").then(function (response) {
+            axios.get(url+"/getsolcategorydetail").then(function (response) {
                 if (response.status == 200) {
                     setSolutioncategory(response.data)
                     setIsSolutioncategoryFetched(true)

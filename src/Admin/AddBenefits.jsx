@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
+import url from '../Url';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -45,7 +46,7 @@ const handleClick = () =>{
          "icon": coverimg,
         
    }
-   axios.post("http://localhost:8080/solutionbenefits/"+name,
+   axios.post(url+"/solutionbenefits/"+name,
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

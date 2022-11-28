@@ -1,12 +1,11 @@
 import './Experience.css';
-import years from './pexel.jpg'
 import React from 'react';
 const Experience=()=>{
     return (
     <>
         <div class=" grid lg:grid-cols-2 ExperienceGrid">
             <div class=" centered md:auto">
-                <img className="years-experience"src={years}/>
+                <img className="years-experience"src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/pexel.jpg"/>
             </div>
             <div class=" centered md:auto">
                 <h1 class="text-experience"> 7+ Years of Quality AV Experiences in Pune</h1>

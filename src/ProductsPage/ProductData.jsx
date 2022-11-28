@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import url from '../Url';
 
 function ProductData(){
     const[products1, setProducts] = useState([])
@@ -9,7 +10,7 @@ function ProductData(){
   useEffect(()=>{
     if(!isProductFetched)
     {
-      axios.get("http://localhost:8080/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
+      axios.get(url+"/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
         if(response.status == 200){
           setProducts(response.data)
           setIsProductFetched(true)

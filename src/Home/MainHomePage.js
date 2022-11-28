@@ -16,13 +16,14 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { Brightness1 } from '@material-ui/icons';
+import url from '../Url';
 function Home1() {
   const navigate = useNavigate()
   const [homeCover, setHomeCover] = useState([])
   const [isHomeCoverFetched, setIsHomeFetched] = useState(false)
   useEffect(() => {
     if (!isHomeCoverFetched) {
-      axios.get("http://localhost:8080/getAchievements").then(function (response) {
+      axios.get(url+"/getAchievements").then(function (response) {
         if (response.status == 200) {
           setHomeCover(response.data)
           setIsHomeFetched(true)

@@ -5,10 +5,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 import {Button} from 'reactstrap';
-import Trial from './Trial.js';
-import Home from './components/Home';
 import Example from './Example';
-import ProductMain from './ProductsPage/ProductMain';
 import Solution from './Solution/Solution'
 import ProductData from './ProductsPage/ProductData';
 import ProductPage from './ProductsPage/ProductPage';
@@ -16,13 +13,13 @@ import Solcat from './Solcat/Solcat';
 
 import MultiItemCarousel1 from './ProductCategory/ProductCategory';
 import ContactSection from './ContactUs/ContactSection';
-import NewTrial from './ProductsPage/NewTrial';
 import ImageSlider from './ProductsPage/ImageSlider';
 import Home1 from './Home/MainHomePage';
 import ProductForm from './ProductsPage/ProductForm';
 import AddSolution from './Admin/AddSolution';
 import AddAdmin from './Admin/AddAdmin';
 import {getCookie, setCookie} from './Cookies';
+import url from './Url';
 function App() {
   const navigate = useNavigate()
   const[products, setProducts] = useState([])
@@ -30,7 +27,7 @@ function App() {
   useEffect(()=>{
     if(!isProductFetched)
     {
-      axios.get("http://localhost:8080/getSolutions/Interactive Training Rooms").then(function(response){
+      axios.get(url+"/getSolutions/Interactive Training Rooms").then(function(response){
         if(response.status == 200){
           setProducts(response.data)
           setIsProductFetched(true)

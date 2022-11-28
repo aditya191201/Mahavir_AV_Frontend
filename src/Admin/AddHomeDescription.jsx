@@ -6,6 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var title = ""
 var description = ""
 function AddHomeDescription(){
@@ -34,7 +35,7 @@ const handleClick = () =>{
          
         
    }
-   axios.post("http://localhost:8080/companydescription",
+   axios.post(url+"/companydescription",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

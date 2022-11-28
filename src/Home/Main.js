@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import videoBg from '../assets/videoBg.mp4'
+import url from '../Url'
 
 function Main(){
   const[homeCover, setHomeCover] = useState([])
@@ -8,7 +8,7 @@ function Main(){
   useEffect(()=>{
     if(!isHomeCoverFetched)
     {
-      axios.get("http://localhost:8080/gethomecover").then(function(response){
+      axios.get(url+"/gethomecover").then(function(response){
         if(response.status == 200){
           setHomeCover(response.data)
           setIsHomeFetched(true)

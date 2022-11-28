@@ -6,6 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var title = ""
 var description = ""
 function AddHomeVideo(){
@@ -34,7 +35,7 @@ const handleClick = () =>{
          
         
    }
-   axios.post("http://localhost:8080/homecover",
+   axios.post(url+"/homecover",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

@@ -9,6 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import AddProductFeatures from './AddProductFeatures'
 import AddProductHighlights from './AddProductHighlights';
 import { useState } from 'react';
+import url from '../Url';
 var modelNumber = ""
 var name = ""
 var highlights = ""
@@ -87,7 +88,7 @@ function AddProduct(){
          "productCategory": category,
          "imgSrc": images
    }
-   axios.post("http://localhost:8080/add-product",
+   axios.post(url+"/add-product",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",

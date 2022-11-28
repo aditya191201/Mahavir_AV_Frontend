@@ -2,41 +2,7 @@ import './Partners.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React from "react";
-import Aten from './logo/aten.png';
-import Atlona from './logo/atlona.png';
-import Barco from './logo/barco.png';
-import Benq from './logo/benq.png';
-import Beyerdynamic from './logo/beyerdynamic.png';
-import Biamp from './logo/biamp.png';
-import Bose from './logo/bose.png';
-import Btechav from './logo/btechav.png';
-import Cisco from './logo/cisco.png';
-import Ciscomain from './logo/ciscomain.png';
-import Ciscowebex from './logo/ciscowebex.png';
-import Clearone from './logo/clearone.png';
-import Crestron from './logo/crestron.png';
-import Datapath from './logo/datapath.png';
-import Epson from './logo/epson.png';
-import Jbl from './logo/jbl.png';
-import Kramer from './logo/kramer.png';
-import LG from './logo/LG.png';
-import Logic from './logo/logic.png';
-import Logitech from './logo/logitech.png';
-import Lumi from './logo/lumi.png';
-import Monitors from './logo/monitors.png';
-import Newline from './logo/newline.png';
-import Nvidia from './logo/nvidia.png';
-import Paloalto from './logo/paloalto.png';
-import Panasonic from './logo/panasonic.png';
-import Polycom from './logo/polycom.png';
-import Poly from './logo/polypng.png';
-import Purelink from './logo/purelink.png';
-import Qsc from './logo/qsc.png';
-import Ruckus from './logo/ruckus.png';
-import Samsung from './logo/samsung.png';
-import Sennheise from './logo/sennheise.png';
-import Stonewater from './logo/stonewater.png';
-import Zoom from './logo/zoom.png';
+
 function Partners() {
   return (
     <>
@@ -46,109 +12,109 @@ function Partners() {
     <div class="slider-partners-abt-us">
         <div class="slide-partners-abt-us-track">
             <div class="slide-partners-abt-us">
-                <img src={Aten}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/aten.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Atlona}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/atlona.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Barco}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/barco.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Benq}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/benq.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Beyerdynamic}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/beyerdynamic.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Biamp}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/biamp.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Btechav}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/btechav.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Bose}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/bose.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Cisco}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/cisco.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Clearone}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/clearone.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Ciscomain}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/ciscomain.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Crestron}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/crestron.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Ciscowebex}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/ciscowebex.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Datapath}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/datapath.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Epson}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/epson.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Jbl}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/jbl.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Kramer}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/kramer.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={LG}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/LG.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Logic}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/logic.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Logitech}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/logitech.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Lumi}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/lumi.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Monitors}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/monitors.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Newline}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/newline.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Nvidia}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/nvidia.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Paloalto}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/paloalto.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Panasonic}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/panasonic.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Polycom}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/polycom.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Poly}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/polypng.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Purelink}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/purelink.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Qsc}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/qsc.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Ruckus}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/ruckus.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Samsung}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/samsung.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Sennheise}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/sennheise.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Stonewater}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/stonewater.png"/>
             </div>
             <div class="slide-partners-abt-us">
-                <img src={Zoom}/>
+                <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/About Us/logo/zoom.png"/>
             </div>
         </div>
     </div>

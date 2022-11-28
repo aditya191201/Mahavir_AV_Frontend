@@ -1,7 +1,6 @@
 import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 import './Solution.css'
-import Slider from './Slider';
 import Feature from './FeatureCards';
 import Card from './BenefitCard';
 import axios from 'axios';
@@ -17,6 +16,7 @@ import FCard from "./feature-card-comp";
 import './benefit-card-comp.css'
 import styles from "../aboutus/Picture.module.css";
 import '../Solcat/solcat.css';
+import url from '../Url';
 
 function Solution() {
    const[solution,setSolution] = useState([])
@@ -25,7 +25,7 @@ function Solution() {
       window.scrollTo(0,0);
       if(!isSolutionFetched)
       {
-         axios.get("http://localhost:8080/getSolutions/"+localStorage.getItem('solname')).then(function(response){
+         axios.get(url+"/getSolutions/"+localStorage.getItem('solname')).then(function(response){
         if(response.status == 200){
           setSolution(response.data)
           setIsSolutionFetched(true)
@@ -65,12 +65,12 @@ function Solution() {
 
 
          </section>
-         <br />
+         {/* <br />
         <div className="youtube-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qVRN658IrU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          
         </div>
-        <br />
+        <br /> */}
          <div >
             <div className='categoryh1' style={{marginBottom:10}}><h1>Features</h1></div>
          

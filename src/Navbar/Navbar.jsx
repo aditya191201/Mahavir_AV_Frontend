@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button} from 'reactstrap';
-import logo from './MAVS LOGO-1-02.png';
 import './Navbar.css'
 import NavLinks from './NavLinks';
 const Navbar = () => {
@@ -27,7 +26,7 @@ const Navbar = () => {
     <nav className="sticky">
         <div className="flex items-center font-medium justify-around height-63 navbar">
             <div className="z-50 p-5 md:w-auto w-full flex justify-between ">
-              <img src={logo} alt="logo" className='logo-img md:cursor-pointer' onClick={()=>handleClick()}/>
+              <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/MAVS LOGO-1-02.png" alt="logo" className='logo-img md:cursor-pointer' onClick={()=>handleClick()}/>
               <div className="text-3xl md:hidden icon1 text-white" onClick={()=>setOpen(!open)}>
               <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon>
                 </div>

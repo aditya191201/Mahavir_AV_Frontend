@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './AddSolution.css';
 import { setCookie } from '../Cookies';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var email = ""
 var password = ""
 var name = ""
@@ -27,7 +28,7 @@ function AddAdmin(){
             "password": password,
             "name": name,
       }
-      axios.post("http://localhost:8080/register", formBody, {
+      axios.post(url+"/register", formBody, {
 
       headers: {
           "Content-Type": "multipart/form-data"

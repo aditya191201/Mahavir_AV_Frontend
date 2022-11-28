@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './FeatureCards.css'
 import FCard from "./feature-card-comp";
 import axios from "axios";
+import url from "../Url";
 function Feature()
 {
  const[solution,setSolution] = useState([])
@@ -9,7 +10,7 @@ function Feature()
    useEffect(()=>{
       if(!isSolutionFetched)
       {
-         axios.get("http://localhost:8080/getSolutions/"+localStorage.getItem('solname')).then(function(response){
+         axios.get(url+"/getSolutions/"+localStorage.getItem('solname')).then(function(response){
         if(response.status == 200){
           setSolution(response.data)
           setIsSolutionFetched(true)

@@ -2,7 +2,6 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ProductCarousal.css';
-import { data, multiData } from './data';
 // import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -11,6 +10,7 @@ import { faGreaterThan, faLessThan} from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import url from '../Url';
 
 let slidesToShow = 5;
 const PreviousBtn = (props) => {
@@ -81,7 +81,7 @@ const MultiItemCarousel1 = () => {
   useEffect(()=>{
     if(!isProductCatFetched)
     {
-      axios.get("http://localhost:8080/getproductcategory").then(function(response){
+      axios.get(url+"/getproductcategory").then(function(response){
         if(response.status == 200){
           setProductsCat(response.data)
           setIsProductCatFetched(true)

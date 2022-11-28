@@ -3,6 +3,7 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import url from '../Url';
 import './contenthome.css';
 
 function Videotxt(){
@@ -12,7 +13,7 @@ function Videotxt(){
   useEffect(()=>{
     if(!isHomeCoverFetched)
     {
-      axios.get("http://localhost:8080/gethomecover").then(function(response){
+      axios.get(url+"/gethomecover").then(function(response){
         if(response.status == 200){
           setHomeCover(response.data)
           setIsHomeFetched(true)

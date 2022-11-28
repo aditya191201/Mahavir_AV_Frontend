@@ -3,12 +3,10 @@ import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
+import url from '../Url';
 import ImageSlider from './ImageSlider';
-import NewTrial from './NewTrial';
 import ProductData from './ProductData';
 import ProductFeature from './ProductFeature';
-import ProductFeature1 from './ProductFeatures1';
-import ProductMain from './ProductMain';
 import './ProductPage.css';
 
 function ProductPage(){
@@ -18,7 +16,7 @@ function ProductPage(){
   useEffect(()=>{
     if(!isProductFetched)
     {
-      axios.get("http://localhost:8080/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
+      axios.get(url+"/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
         if(response.status == 200){
           setProducts(response.data)
           setIsProductFetched(true)
@@ -76,11 +74,11 @@ function ProductPage(){
             </div>
             <br />
             <br />
-            <div className="youtube-container">
+            {/* <div className="youtube-container">
         <iframe width="560" height="315" src={products1.productVideoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <br />
          <br />
-        </div>
+        </div> */}
             <ProductFeature/>
         </>
     )

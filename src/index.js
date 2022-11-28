@@ -4,10 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {useNavigate, BrowserRouter, Routes, Route} from 'react-router-dom';
-import Trial from './Trial.js';
 import Aboutus from './aboutus/Aboutus';
 import Solution from './Solution/Solution';
-import ProductMain from './ProductsPage/ProductMain';
 import Home1 from './Home/MainHomePage';
 import ProductPage from './ProductsPage/ProductPage';
 import MultiItemCarousel1 from './ProductCategory/ProductCategory';
@@ -33,7 +31,6 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path = '/' element = {<App/>}/>
-    <Route path = '/trial' element = {<Trial/>}/>
     <Route path = '/aboutus' element = {<Aboutus/>}/>
     <Route path = '/solution/:category/:link' element = {<Solution/>}/>
     {/* <Route path = '/solution' element = {<Solution/>}/> */}

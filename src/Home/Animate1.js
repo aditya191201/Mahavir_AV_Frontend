@@ -1,12 +1,11 @@
 import React from 'react';
-import Animegif from '../assets/conference.mp4'
 import './Animations.css';
 
 const Animate1 = () => {
   return (
     <div >
         <div className='animedes' >
-            <video src={Animegif} autoPlay loop muted />
+            <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/conference.mp4" autoPlay loop muted />
         </div>
         
         

@@ -6,6 +6,7 @@ import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
+import url from '../Url';
 var title = ""
 
 function AddAchievements(){
@@ -30,7 +31,7 @@ const handleClick = () =>{
          
         
    }
-   axios.post("http://localhost:8080/achievements",
+   axios.post(url+"/achievements",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",
