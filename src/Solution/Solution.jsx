@@ -17,6 +17,7 @@ import './benefit-card-comp.css'
 import styles from "../aboutus/Picture.module.css";
 import '../Solcat/solcat.css';
 import url from '../Url';
+import Footer from '../FooterPage/Footer';
 
 function Solution() {
    const[solution,setSolution] = useState([])
@@ -121,6 +122,7 @@ function Solution() {
          <div>
          <Carousel image1 = {solution.solimg1} image2 = {solution.solimg2} image3 = {solution.solimg3}/>
          </div>
+         {/* <Footer/> */}
 
       </>
 

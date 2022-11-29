@@ -6,15 +6,18 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     /* opacity: 0.5; */
+    
   }
-  
-
+  .contact-main{
+    background: url("https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/contact-us.webp");
+  }
   
   .contact-section{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top:150px;
+    /* margin-top:150px; */
+   padding: 50px;
   }
   
   .contact-info{
@@ -55,7 +58,7 @@
   }
   .contact-form .text-box{
     
-    color: #fff;
+    color: black;
     border: none;
     width: calc(50% - 10px);
     height: 50px;
@@ -76,7 +79,7 @@
   
   .contact-form textarea{
     
-    color: #fff;
+    color: black;
     border: none;
     width: 100%;
     padding: 12px;

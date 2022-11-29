@@ -13,7 +13,7 @@ export default function ContactSection() {
       <span>Something went wrong! Please try again.</span>
     </div>
      */}
-    
+    <div class="contact-main">
     <div class="contact-section">
       <div class="contact-info">
         <div className='categoryh1'><h1>Contact Us</h1></div>
@@ -32,7 +32,7 @@ export default function ContactSection() {
        
       </div>
     </div>
-    
+    </div>
     
     
     {/* <Footer/> */}

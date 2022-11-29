@@ -4,6 +4,7 @@ import Picture from './Picture.js'
 import Navbar from '../Navbar/Navbar.jsx'
 import Experience from './Experience';
 import Partners from './Partners';
+import Footer from '../FooterPage/Footer';
 
 function Aboutus(){
     useEffect(()=>{
@@ -48,6 +49,9 @@ function Aboutus(){
             </div> */}
         </section>
         <Partners/>
+        <div>
+            <Footer/>
+        </div>
     </>)
 }
 export default Aboutus;

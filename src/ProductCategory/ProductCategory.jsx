@@ -11,6 +11,7 @@ import Navbar from '../Navbar/Navbar';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import url from '../Url';
+import Footer from '../FooterPage/Footer';
 
 let slidesToShow = 5;
 const PreviousBtn = (props) => {
@@ -178,8 +179,12 @@ const MultiItemCarousel1 = () => {
                     }
                 </Slider>
             </div>
+           
         ))
     }
+     <div>
+              <Footer/>
+     </div>
     </>
   );
 };

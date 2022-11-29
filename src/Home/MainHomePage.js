@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from "axios";
 import { Brightness1 } from '@material-ui/icons';
 import url from '../Url';
+import Footer from '../FooterPage/Footer';
 function Home1() {
   const navigate = useNavigate()
   const [homeCover, setHomeCover] = useState([])
@@ -85,7 +86,7 @@ function Home1() {
       </div>
 
       <div>
-        {/* <Footer /> */}
+        <Footer/>
       </div>
 
     </>

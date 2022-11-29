@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Footer from '../FooterPage/Footer';
 import Navbar from '../Navbar/Navbar';
 import url from '../Url';
 import ImageSlider from './ImageSlider';
@@ -81,6 +82,10 @@ function ProductPage(){
          <br />
         </div> */}
             <ProductFeature/>
+
+          <div>
+              <Footer/>
+          </div>
         </>
     )
 }
