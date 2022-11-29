@@ -1,7 +1,6 @@
 import React from 'react';
 import './Animations.css';
 import './headcontent.css';
-import logoimg from '../FooterPage/logomavs.png';
 import { GoLocation } from 'react-icons/go';
 import { GoMail } from 'react-icons/go';
 import { BiPhone } from 'react-icons/bi';
@@ -36,7 +35,7 @@ const Footer = () => {
       </div>
       <div className='endside'>
         <div className='logo-image'>
-        <img src={logoimg} alt="logoimg"   ></img>
+        <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/logomavs.png" alt="logoimg"   ></img>
         </div>
         
 

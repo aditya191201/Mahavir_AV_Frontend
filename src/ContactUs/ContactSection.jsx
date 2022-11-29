@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Navbar/Navbar';
 import './ContactSection.css';
 import '../Solcat/solcat.css';
+import Footer from '../FooterPage/Footer';
 export default function ContactSection() {
   return (
     <>
@@ -35,7 +36,7 @@ export default function ContactSection() {
     </div>
     
     
-    {/* <Footer/> */}
+    <Footer/>
     </>
   );
 }
