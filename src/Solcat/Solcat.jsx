@@ -68,7 +68,7 @@ function Solcat() {
                                     <img src={solution1.coverimg} alt="" />
                                 </div>
                                 <h2>{solution1.title}</h2>
-                                <div className="card-text"><p>{solution1.description}
+                                <div className="card-text"><p>{solution1.description}.....
                                 </p></div>
                                 
                                 <div style={{marginLeft: 20}}>

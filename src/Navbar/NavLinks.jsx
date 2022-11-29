@@ -83,7 +83,7 @@ const NavLinks = () => {
                                             subHeading === mysublinks.Head ? 'md:hidden' : 'hidden'
                                         }`}>
                                             {mysublinks.sublink.map((slink)=>(
-                                                <li className="py-3 pl-14 md:hidden text-white">{slink.name}</li>
+                                                <li className="py-3 pl-14 md:hidden text-white" onClick={()=>handleClick(mysublinks.Head,slink.name)}>{slink.name}</li>
                                                 // <Link to={slink.link}>{slink.name}</Link>
                                             ))}
                                         </div>

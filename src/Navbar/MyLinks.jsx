@@ -5,7 +5,6 @@ export const links = [{name: 'Home', mainlink:"/home"},
         {
             Head: "Meeting and Presentation",
             sublink:[
-                { name:'Digital Marketing'},
                 { name:'Boardrooms and Conference Rooms'},
                 { name: 'Interactive Training Rooms'}
             ]
