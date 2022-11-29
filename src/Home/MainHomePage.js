@@ -6,7 +6,7 @@ import SolCard from './SolutionCard';
 import Videotxt from './videotxtSZ';
 import "./solncontent.css";
 import Counter from './Counter';
-import Footer from './Footer';
+// import Footer from '../FooterPage/Footer';
 // import Counter from './Counter';
 import Animate2 from './Animate2';
 import ContentSZ from './content-home';
@@ -85,7 +85,7 @@ function Home1() {
       </div>
 
       <div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
 
     </>

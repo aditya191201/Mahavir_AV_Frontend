@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {useNavigate, BrowserRouter, Routes, Route} from 'react-router-dom';
+import {useNavigate, BrowserRouter, Routes, Route, HashRouter} from 'react-router-dom';
 import Aboutus from './aboutus/Aboutus';
 import Solution from './Solution/Solution';
 import Home1 from './Home/MainHomePage';
@@ -22,15 +22,18 @@ import AddProductCategory from './Admin/AddProductCategory';
 import AddHomeVideo from './Admin/AddHomeVideo';
 import AddAchievements from './Admin/AddAchievements';
 import AddHomeDescription from './Admin/AddHomeDescription';
+import NavTrial from './Navbar/NavTrial';
+import AddAdmin from './Admin/AddAdmin';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
   {/* <React.StrictMode>
     <App />
   </React.StrictMode> */}
-  <BrowserRouter>
+  <HashRouter>
   <Routes>
-    <Route path = '/' element = {<App/>}/>
+    <Route path = '/' element = {<Home1/>}/>
+    <Route path = '/add-admin' element = {<AddAdmin/>}/>
     <Route path = '/aboutus' element = {<Aboutus/>}/>
     <Route path = '/solution/:category/:link' element = {<Solution/>}/>
     {/* <Route path = '/solution' element = {<Solution/>}/> */}
@@ -50,8 +53,9 @@ root.render(
     <Route path = '/add-achievements' element = {<AddAchievements/>}/>
     <Route path = '/add-home-description' element = {<AddHomeDescription/>}/>
     <Route path = '/productcategory' element = {<MultiItemCarousel1/>}/>
+    <Route path = '/trial' element = {<NavTrial/>}/>
   </Routes>
-  </BrowserRouter>
+  </HashRouter>
   </>
 );
 

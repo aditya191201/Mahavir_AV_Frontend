@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from "axios";
+import url from "../Url";
 function ContentSZ()
 {
 
@@ -15,7 +16,7 @@ function ContentSZ()
   useEffect(()=>{
     if(!isHomeCoverFetched)
     {
-      axios.get("http://localhost:8080/getCompanyDescription").then(function(response){
+      axios.get(url+"/getCompanyDescription").then(function(response){
         if(response.status == 200){
           setHomeCover(response.data)
           setIsHomeFetched(true)

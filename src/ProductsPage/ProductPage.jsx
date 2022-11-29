@@ -14,6 +14,7 @@ function ProductPage(){
   const[isProductFetched , setIsProductFetched] = useState(false) 
   
   useEffect(()=>{
+    window.scrollTo(0,0)
     if(!isProductFetched)
     {
       axios.get(url+"/getProducts/"+localStorage.getItem('modelNum')).then(function(response){
