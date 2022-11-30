@@ -25,6 +25,7 @@ import AddHomeDescription from './Admin/AddHomeDescription';
 import NavTrial from './Navbar/NavTrial';
 import AddAdmin from './Admin/AddAdmin';
 import AddProductExcel from './Admin/AddProductExcel';
+import AddSolutionExcel from './Admin/AddSolutionExcel';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -54,6 +55,7 @@ root.render(
     <Route path = '/add-achievements' element = {<AddAchievements/>}/>
     <Route path = '/add-home-description' element = {<AddHomeDescription/>}/>
     <Route path = '/add-product-excel' element = {<AddProductExcel/>}/>
+    <Route path = '/add-solution-excel' element = {<AddSolutionExcel/>}/>
     <Route path = '/productcategory' element = {<MultiItemCarousel1/>}/>
     <Route path = '/trial' element = {<NavTrial/>}/>
   </Routes>

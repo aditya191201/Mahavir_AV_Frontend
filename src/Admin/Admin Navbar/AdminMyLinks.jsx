@@ -6,6 +6,13 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
         {name:'Add Home Achievements',link:'/add-achievements'}
     ]}
 ]}, 
+{name: 'Add Excel', mainlink:"", submenu:true, sublinks:[
+    {Head: "Excel Submenu",
+    sublink:[
+        {name:'Add Product Excel', link:'/add-product-excel'},
+        {name:'Add Solution Excel', link:'/add-solution-excel'}
+    ]}
+]}, 
     {name: 'Add Product', mainlink:"/add-product", submenu:true, sublinks:[
     {
         Head: "Product Submenu",
