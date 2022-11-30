@@ -24,6 +24,7 @@ import AddAchievements from './Admin/AddAchievements';
 import AddHomeDescription from './Admin/AddHomeDescription';
 import NavTrial from './Navbar/NavTrial';
 import AddAdmin from './Admin/AddAdmin';
+import AddProductExcel from './Admin/AddProductExcel';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -52,6 +53,7 @@ root.render(
     <Route path = '/add-home-video' element = {<AddHomeVideo/>}/>
     <Route path = '/add-achievements' element = {<AddAchievements/>}/>
     <Route path = '/add-home-description' element = {<AddHomeDescription/>}/>
+    <Route path = '/add-product-excel' element = {<AddProductExcel/>}/>
     <Route path = '/productcategory' element = {<MultiItemCarousel1/>}/>
     <Route path = '/trial' element = {<NavTrial/>}/>
   </Routes>

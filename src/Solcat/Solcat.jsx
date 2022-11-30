@@ -82,10 +82,11 @@ function Solcat() {
                         ))}
                     </div>
                     <div>
-                        <Footer/>
+                        
                     </div>
                 </>
             ))}
+            <Footer/>
         </>
 
 
