@@ -95,14 +95,14 @@ const MultiItemCarousel1 = () => {
     }
   }) 
   function handleClick(item){
-    
+    console.log("In item....")
     var modelnum = item.modelNum
     console.log("inside handle click",item)
     localStorage.setItem("img",item.productimg)
     localStorage.setItem('modelNum',modelnum)
     console.log("model number",modelnum)
     navigate('/product');
-}
+  }
 
   const [width, setWidth] = useState(window.innerWidth);
   const updateWidth = () => {

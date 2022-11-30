@@ -12,23 +12,28 @@ function ImageSlider() {
       {id:2, value: localStorage.getItem("image3")},
       
     ]
+
+    
     
     // (imgs[0] != null) ? (setIsFetched(true)) :(null)
     
     console.log("img in Image SLider",localStorage.getItem("img"))
-    const [wordData,setWordData]=useState(localStorage.getItem("img"))
+    const [wordData,setWordData]=useState(localStorage.getItem("image1"))
     // const [wordData,setWordData] = useState();
     const [check,setCheck] = useState(false)
 
+    
 
 
-    // useEffect(()=>{
-    //   if(!check){
-    //     console.log("In check:",localStorage.getItem("img"))
-    //     setWordData(localStorage.getItem("img"))
-    //     setCheck(true)
-    //   }
-    // })
+
+    useEffect(()=>{
+      if(!check){
+        console.log("In check:",localStorage.getItem("img"))
+        const wordSlider = imgs[0];
+        setWordData(wordSlider)
+        setCheck(true)
+      }
+    })
     
     const handleClick=(index)=>{
       console.log("handle click index:",index)
@@ -46,7 +51,7 @@ function ImageSlider() {
         
       <div className="app">
         <div className="details">
-            {(imgs[0]!=null) ? (<img src={wordData.value} className="big-img" /> ) : (<h1>abcsd</h1>)}
+            {(imgs[0]!=null) ? (<img src={wordData.value} className="big-img" /> ) : (<img src={wordData} className="big-img" /> )}
         
         <div className='flex_row'>
           {imgs.map((data,i)=>
