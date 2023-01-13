@@ -5,7 +5,9 @@ import { GoLocation } from 'react-icons/go';
 import { GoMail } from 'react-icons/go';
 import { BiPhone } from 'react-icons/bi';
 import { ImClock } from 'react-icons/im';
-const Footer = () => {
+import { useNavigate } from 'react-router-dom';
+function Footer(){
+  const navigate = useNavigate()
   return (
 
     <div className='foot'>
@@ -14,11 +16,11 @@ const Footer = () => {
       <div >
         <h1 className='leftside'>Useful Links</h1>
         <div className='foot-content'>
-          <h2>About Us</h2>
-          <h2>Products</h2>
-          <h2>Solutions</h2>
-          <h2>Contact Us</h2>
-          <h2>Enquiry</h2>
+          <h2 onClick={()=>navigate("/aboutus")} className="footer-h2">About Us</h2>
+          <h2 onClick={()=>navigate("/productcategory")} className="footer-h2">Products</h2>
+          <h2 onClick={()=>navigate("/solutioncategory")} className="footer-h2">Solutions</h2>
+          <h2 onClick={()=>navigate("/contactus")} className="footer-h2">Contact Us</h2>
+          <h2 onClick={()=>navigate("/contactus")} className="footer-h2">Enquiry</h2>
 
 
 
@@ -48,13 +50,13 @@ const Footer = () => {
         <br></br>
         <div className='icon-with-text'>
           <GoMail color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;mahaviravsolutions@gmail.com</p>
+          <p>&nbsp;&nbsp;<a href="mailto:mahaviravsolutions@gmail.com?subject=Mail">mahaviravsolutions@gmail.com</a></p>
 
         </div>
         <br></br>
         <div className='icon-with-text'>
           <BiPhone color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;0712-232435</p>
+          <p>&nbsp;&nbsp;<a href="tel:0712-232435">0712-232435</a></p>
 
         </div>
         <br></br>

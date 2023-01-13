@@ -46,11 +46,16 @@
     .header{
         font-size: 19px !important;
         margin-top:83px;
+        color: black;
     }  
 }
 @media screen and (width<400px) {
     .header{
         margin-top: 33px;
+        color: black;
+    }
+    .article_abt_us{
+            height: 310px;
     }
 }
 @media screen and (width<330px) {

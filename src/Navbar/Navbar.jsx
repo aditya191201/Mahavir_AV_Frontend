@@ -1,3 +1,4 @@
+import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { blue } from '@mui/material/colors';
@@ -30,6 +31,7 @@ const Navbar = () => {
         <div className="flex items-center font-medium justify-around height-63 navbar">
             <div className="z-50 p-5 md:w-auto w-full flex justify-between ">
               <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/MAVS LOGO-1-02.png" alt="logo" className='logo-img md:cursor-pointer' onClick={()=>handleClick()}/>
+        
               <div className="text-3xl md:hidden icon1 text-white" onClick={()=>setOpen(!open)}>
               {/* <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon> */}
               <FontAwesomeIcon icon={faBars} style={{ color: "white", fontSize: "30px" }}/>

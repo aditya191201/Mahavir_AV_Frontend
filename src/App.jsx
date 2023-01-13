@@ -12,7 +12,6 @@ import ProductPage from './ProductsPage/ProductPage';
 import Solcat from './Solcat/Solcat';
 
 import MultiItemCarousel1 from './ProductCategory/ProductCategory';
-import ContactSection from './ContactUs/ContactSection';
 import ImageSlider from './ProductsPage/ImageSlider';
 import Home1 from './Home/MainHomePage';
 import ProductForm from './ProductsPage/ProductForm';

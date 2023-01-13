@@ -47,6 +47,7 @@ function ProductPage(){
         <ProductData/>
         {/* <ProductMain/> */}
         {/* <NewTrial/> */}
+        <div className="product-total">
         <ImageSlider/>
         <div>
                 <div className="product_desc">
@@ -76,15 +77,16 @@ function ProductPage(){
             </div>
             <br />
             <br />
-            {/* <div className="youtube-container">
+            <div className="youtube-container">
         <iframe width="560" height="315" src={products1.productVideoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          <br />
          <br />
-        </div> */}
+        </div>
             <ProductFeature/>
 
           <div>
               <Footer/>
+          </div>
           </div>
         </>
     )

@@ -7,16 +7,23 @@
 }
 .details{
     display: grid;
+    align-items: center;
     justify-content:center;
     flex-wrap: wrap;
     padding: 30px 0;
 }
+.proudct-total{
+    /* overflow: hidden; */
+    overflow-x: hidden;
 
+}
 .details .big-img{
     max-width: 500px;
     min-width: 290px;
     overflow: hidden;
     margin: 25px;
+    width: 80%;
+    /* margin-left: 250px; */
 }
 .big-img img{
     width: 100%;
@@ -146,6 +153,7 @@
     .row h1{
         margin-left: 20px;
         font-size: 30px;
+        text-align: center;
     }
 }
 @media (max-width: 768px)

@@ -63,15 +63,13 @@ function Solution() {
                Well integrated AV technology improves the quality of internal and external events involving a large number of stakeholders. */}
                {solution.description}
             </p>
-
-
          </section>
-         {/* <br />
-        <div className="youtube-container">
+         <br />
+        {/* <div className="youtube-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qVRN658IrU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
          
-        </div>
-        <br /> */}
+        </div> */}
+        <br />
          <div >
             <div className='categoryh1' style={{marginBottom:10}}><h1>Features</h1></div>
          

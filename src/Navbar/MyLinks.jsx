@@ -20,4 +20,6 @@ export const links = [{name: 'Home', mainlink:"/home"},
     ]},
     // {name: 'Blog',mainlink:"/"},
     {name: 'About Us',mainlink:"/aboutus"},
-    {name:'Contact Us', mainlink:"/contactus"}]
+    {name:'Contact Us', mainlink:"/contactus"},
+    {name:'Blogs', mainlink:"/blog"},
+]

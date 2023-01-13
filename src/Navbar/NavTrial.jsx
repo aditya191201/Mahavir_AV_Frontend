@@ -34,6 +34,16 @@ function NavTrial(){
                     <h2>{nav.mainlink}</h2>
                     {/* <h2>{nav.sublinks}</h2> */}
                     {/* {(nav.submenu)?(<>yes</>): (<>no</>)} */}
+                    {(nav.sublinks!= null) ? (nav.sublinks.map(link=>(
+                      <div>
+                        {link.head}
+                        {link.sublink.map(slink=>(
+                          <div>{slink}</div>
+                        ))}
+                      </div>
+                      
+                    ))  ) : (null)}
+                                     
                 </div>
                 
                 

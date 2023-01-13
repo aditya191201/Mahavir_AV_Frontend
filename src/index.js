@@ -9,7 +9,6 @@ import Solution from './Solution/Solution';
 import Home1 from './Home/MainHomePage';
 import ProductPage from './ProductsPage/ProductPage';
 import MultiItemCarousel1 from './ProductCategory/ProductCategory';
-import ContactSection from './ContactUs/ContactSection';
 import Solcat from './Solcat/Solcat';
 import AddSolution from './Admin/AddSolution';
 import AddProduct from './Admin/AddProduct';
@@ -26,6 +25,9 @@ import NavTrial from './Navbar/NavTrial';
 import AddAdmin from './Admin/AddAdmin';
 import AddProductExcel from './Admin/AddProductExcel';
 import AddSolutionExcel from './Admin/AddSolutionExcel';
+import Contact1 from './ContactUs/Contact1';
+import Blog from './Blogs/Blog';
+import BlogMain from './Blogs/BlogMain';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -42,7 +44,7 @@ root.render(
     <Route path = '/solutioncategory' element = {<Solcat/>}/>
     <Route path = '/product' element = {<ProductPage/>}/>
     <Route path = '/home' element = {<Home1/>}/>
-    <Route path = '/contactus' element = {<ContactSection/>}/>
+    <Route path = '/contactus' element = {<Contact1/>}/>
     <Route path = '/add-solution' element = {<AddSolution/>}/>
     <Route path = '/add-product' element = {<AddProduct/>}/>
     <Route path = '/add-solution-benefits' element = {<AddBenefits/>}/>
@@ -58,6 +60,8 @@ root.render(
     <Route path = '/add-solution-excel' element = {<AddSolutionExcel/>}/>
     <Route path = '/productcategory' element = {<MultiItemCarousel1/>}/>
     <Route path = '/trial' element = {<NavTrial/>}/>
+    <Route path = '/blog' element = {<Blog/>}/>
+    <Route path = '/blog-main' element = {<BlogMain/>}/>
   </Routes>
   </HashRouter>
   </>
