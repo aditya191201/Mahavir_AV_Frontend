@@ -22,7 +22,8 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
         sublink:[
             {name:'Add Product Feature', link: '/add-product-feature'},
             {name:'Add Product Highlights', link: '/add-product-highlights'},
-            {name:'Add Product Category',link:'/add-product-category'}
+            {name:'Add Product Category',link:'/add-product-category'},
+            {name:'Add Product Specifications',link:'/add-specifications'}
         ]
     }
     ]

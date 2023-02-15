@@ -46,6 +46,7 @@ import DeleteSolutionById from './Admin/DeleteSolutionById';
 import AddCounter from './Admin/AddCounter';
 import DeleteAllCounters from './Admin/DeleteAllCounters';
 import DeleteCounterById from './Admin/DeleteCounterById';
+import AddSpecification from './Admin/AddSpecification';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -66,6 +67,7 @@ root.render(
     <Route path = '/add-counter' element = {<AddCounter/>}/>
     <Route path = '/add-solution' element = {<AddSolution/>}/>
     <Route path = '/add-product' element = {<AddProduct/>}/>
+    <Route path = '/add-specifications' element = {<AddSpecification/>}/>
     <Route path = '/add-solution-benefits' element = {<AddBenefits/>}/>
     <Route path = '/add-solution-features' element = {<AddFeatures/>}/>
     <Route path = '/add-solution-category' element = {<AddSolCategory/>}/>
