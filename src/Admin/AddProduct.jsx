@@ -3,7 +3,6 @@ import React from 'react'
 import './AddSolution.css';
 import { getCookie } from '../Cookies';
 import { ToastContainer,toast } from 'react-toastify';
-import AddProductCategory from './AddProductCategory';
 import 'react-toastify/dist/ReactToastify.css';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import AddProductFeatures from './AddProductFeatures'
@@ -20,6 +19,7 @@ var img3 = ""
 var video = ""
 var category = ""
 var images = ""
+var broucher = ""
 
 function AddProduct(){
    const[clicked , setIsClicked] = useState(false)
@@ -69,6 +69,10 @@ function AddProduct(){
     images = event.target.value
     console.log(images)
  }
+ const handleBroucher =(event)=>{
+   broucher = event.target.value
+   console.log(broucher)
+ }
   const handleClick1= ()=> {
    setIsClicked(true)
   }
@@ -86,7 +90,8 @@ function AddProduct(){
          "productImage3": img3,
          "videoLink": video,
          "productCategory": category,
-         "imgSrc": images
+         "imgSrc": images,
+         "brochureLink": broucher
    }
    axios.post(url+"/add-product",
    formBody, {
@@ -163,6 +168,10 @@ function AddProduct(){
        <div class="inputfield">
           <label>Images</label>
           <input type="text" onChange={handleImages} class="input"/>
+       </div> 
+       <div class="inputfield">
+          <label>Broucher</label>
+          <input type="text" onChange={handleBroucher} class="input"/>
        </div> 
         
       <div class="inputfield">

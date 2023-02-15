@@ -42,8 +42,24 @@
   color: blue;
 }
 .carousel h1{
-  font-size: 22px;
-  font-weight: bolder;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+    text-align: left;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 30px;
+    padding-right: 120px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+}
+
+.text-product{
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1; 
+   -webkit-box-orient: vertical;
 }

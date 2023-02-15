@@ -12,6 +12,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import url from '../Url';
 import Footer from '../FooterPage/Footer';
+import { Ellipsis } from 'react-bootstrap/esm/PageItem';
 
 let slidesToShow = 5;
 const PreviousBtn = (props) => {
@@ -138,7 +139,8 @@ const MultiItemCarousel1 = () => {
             marginBottom: '10px',
           }}
         />
-        <p style={{ fontSize: '14px', padding: '5px 0' }}>{item.productname}</p>
+        {/* style={{ fontSize: '14px', padding: '5px 0' ,maxLines: 1, textOverflow: Ellipsis}} */}
+        <p className='text-product'>{item.productname}</p>
         <button style={{ fontSize: '16px', padding: '5px 0', color: 'green' }} onClick={()=>handleClick(item)} >
           Read More
         </button>

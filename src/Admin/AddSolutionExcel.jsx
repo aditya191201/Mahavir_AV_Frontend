@@ -5,6 +5,8 @@ import './AddSolution.css';
 import { setCookie } from '../Cookies';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import url from '../Url';
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 var excel = ""
 function AddSolutionExcel(){
     const [selectedsolutionFile, setSelectedSolutionFile] = useState();
@@ -26,6 +28,16 @@ function AddSolutionExcel(){
         }).then(function(response){
           console.log(response.data)
           console.log("okay")
+          toast('Solution Excel Added Successfully', {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
         }).catch(function(error){
           console.log("Error in products");
           // toast.warn("Error In Fetching orders",error)
@@ -55,6 +67,18 @@ return(
       </div>
       </div>
         </div>
+        <ToastContainer
+    position="bottom-right"
+    autoClose={5000}
+    hideProgressBar={false}
+    newestOnTop={false}
+    closeOnClick
+    rtl={false}
+    pauseOnFocusLoss
+    draggable
+    pauseOnHover
+    theme="dark"
+    />
     </div>
     </>
 )

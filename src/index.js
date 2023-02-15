@@ -28,6 +28,24 @@ import AddSolutionExcel from './Admin/AddSolutionExcel';
 import Contact1 from './ContactUs/Contact1';
 import Blog from './Blogs/Blog';
 import BlogMain from './Blogs/BlogMain';
+import DownloadBroucher from './ProductsPage/DownloadBroucher1';
+import AddProductCategoryExcel from './Admin/AddProductCategoryExcel';
+import AddSolutionCategoryExcel from './Admin/AddSolutionCategoryExcel';
+import PopUp from './ProductsPage/PopUp';
+import DeleteProducts from './Admin/DeleteProducts';
+import DeleteProductCategory from './Admin/DeleteProductCategory';
+import DeleteSolutions from './Admin/DeleteSolutions';
+import DeleteSolutionCategory from './Admin/DeleteSolutionCategory';
+import DeleteHomeAchievement from './Admin/DeleteHomeAchievement';
+import DeleteHomeDescription from './Admin/DeleteHomeDescription';
+import DeleteHomeCover from './Admin/DeleteHomeCover';
+import DeleteProductCatById from './Admin/DeleteProductCatById';
+import DeleteProductById from './Admin/DeleteProductById';
+import DeleteSolCatById from './Admin/DeleteSolCatById';
+import DeleteSolutionById from './Admin/DeleteSolutionById';
+import AddCounter from './Admin/AddCounter';
+import DeleteAllCounters from './Admin/DeleteAllCounters';
+import DeleteCounterById from './Admin/DeleteCounterById';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -45,6 +63,7 @@ root.render(
     <Route path = '/product' element = {<ProductPage/>}/>
     <Route path = '/home' element = {<Home1/>}/>
     <Route path = '/contactus' element = {<Contact1/>}/>
+    <Route path = '/add-counter' element = {<AddCounter/>}/>
     <Route path = '/add-solution' element = {<AddSolution/>}/>
     <Route path = '/add-product' element = {<AddProduct/>}/>
     <Route path = '/add-solution-benefits' element = {<AddBenefits/>}/>
@@ -57,11 +76,27 @@ root.render(
     <Route path = '/add-achievements' element = {<AddAchievements/>}/>
     <Route path = '/add-home-description' element = {<AddHomeDescription/>}/>
     <Route path = '/add-product-excel' element = {<AddProductExcel/>}/>
+    <Route path = '/add-product-category-excel' element = {<AddProductCategoryExcel/>}/>
+    <Route path = '/add-solution-category-excel' element = {<AddSolutionCategoryExcel/>}/>
     <Route path = '/add-solution-excel' element = {<AddSolutionExcel/>}/>
     <Route path = '/productcategory' element = {<MultiItemCarousel1/>}/>
+    <Route path = '/delete-products' element = {<DeleteProducts/>}/>
+    <Route path = '/delete-product-id' element = {<DeleteProductById/>}/>
+    <Route path = '/delete-product-category' element = {<DeleteProductCategory/>}/>
+    <Route path = '/delete-product-category-id' element = {<DeleteProductCatById/>}/>
+    <Route path = '/delete-solution-category-id' element = {<DeleteSolCatById/>}/>
+    <Route path = '/delete-solution-id' element = {<DeleteSolutionById/>}/>
+    <Route path = '/delete-solutions' element = {<DeleteSolutions/>}/>
+    <Route path = '/delete-solution-category' element = {<DeleteSolutionCategory/>}/>
+    <Route path = '/delete-home-achievement' element = {<DeleteHomeAchievement/>}/>
+    <Route path = '/delete-home-description' element = {<DeleteHomeDescription/>}/>
+    <Route path = '/delete-home-cover' element = {<DeleteHomeCover/>}/>
+    <Route path = '/delete-counters' element = {<DeleteAllCounters/>}/>
+    <Route path = '/delete-counters-id' element = {<DeleteCounterById/>}/>
     <Route path = '/trial' element = {<NavTrial/>}/>
     <Route path = '/blog' element = {<Blog/>}/>
     <Route path = '/blog-main' element = {<BlogMain/>}/>
+    <Route path = '/popup' element = {<PopUp/>}/>
   </Routes>
   </HashRouter>
   </>

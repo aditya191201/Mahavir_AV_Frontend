@@ -66,6 +66,7 @@
 }
 .product_desc{
     justify-content: center;
+    text-align: justify;
     margin-left: 80px;
     margin-right: 80px;
     font-size: 15px;
@@ -119,7 +120,14 @@
 }
 .producthigh h1{
     font-weight: 700;
-    font-size: 23px;
+    font-size: 25px;
+    line-height: 31px;
+    color: #2F3132;
+    margin-bottom: 20px;
+}
+.producthigh h2{
+    font-weight: 700;
+    font-size: 25px;
     line-height: 31px;
     color: #2F3132;
     margin-bottom: 20px;
@@ -155,6 +163,12 @@
         font-size: 30px;
         text-align: center;
     }
+    /* .download-broucher{
+        margin-left: 100px;
+    } */
+    .specsrow{
+        margin-left: 0 !important;
+    }
 }
 @media (max-width: 768px)
 {
@@ -166,4 +180,41 @@
         margin-top: 0;
         padding-left: 30px;
     }
+    .specsrow{
+        margin-left: 0 !important;
+    }
+}
+.download-broucher{
+    /* margin-left: 650px; */
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.download-broucher button{
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    color: white;
+    padding: 2px 20px;
+    display: flex;
+    text-align: center;
+    margin-top:10px;
+    /* margin-left: 36px; */
+    text-decoration: none;
+    width: 200px;
+    /* padding: 10px; */
+    font-size: 16px;
+}
+.specsrow{
+    margin-left: 200px;
+}
+.tablep{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }

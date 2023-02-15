@@ -147,7 +147,7 @@ body {
   
   .solution{
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     padding-top: 50px;
     padding-bottom: 70px;
     margin-right: 100px;

@@ -8,7 +8,7 @@ import url from '../Url';
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 var excel = ""
-function AddProductExcel(){
+function AddProductCategoryExcel(){
     const [selectedproductFile, setSelectedProductFile] = useState();
     const [isProductFilePicked, setIsProductFilePicked] = useState(false);
     const ProductFileHandler = (event) => {
@@ -22,13 +22,13 @@ function AddProductExcel(){
         console.log("Form Data",formData)
         alert("Submit Clicked")
     
-        axios.post(url+"/excel/products",formData,{
+        axios.post(url+"/excel/productcategory",formData,{
           
           
         }).then(function(response){
           console.log(response.data)
           console.log("okay")
-          toast('Product Excel Added Successfully', {
+          toast('Product Category Excel Added Successfully', {
             position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -39,7 +39,7 @@ function AddProductExcel(){
             theme: "dark",
             });
         }).catch(function(error){
-          console.log("Error in products");
+          console.log("Error in product Category");
           // toast.warn("Error In Fetching orders",error)
     
         })
@@ -54,7 +54,7 @@ return(
     <div className="form-contain">
         <div className="wrapper-form">
             <div className="title-form">
-            Upload Your Products Excel Datasheet here
+            Upload Your Product Category Excel Datasheet here
             </div>
             <div className="form-1">
             <div class="inputfield">
@@ -83,4 +83,4 @@ return(
     </>
 )
 }
-export default AddProductExcel;
+export default AddProductCategoryExcel;

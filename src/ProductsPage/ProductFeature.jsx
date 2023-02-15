@@ -62,7 +62,7 @@ function ProductFeature () {
                        <div className='features-image'>
                         <img src={description.image} alt="" />
                        </div> 
-                       <div>
+                       <div style={{marginTop:25}}>
                         <div className="feature-title">
                             <h1>{description.title}</h1>
                         </div>
@@ -75,7 +75,7 @@ function ProductFeature () {
                     ) : (
                         <>
                        
-                       <div>
+                       <div style={{marginTop:25}}>
                         <div className="feature-title">
                             <h1>{description.title}</h1>
                         </div>

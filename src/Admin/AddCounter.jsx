@@ -4,35 +4,32 @@ import './AddSolution.css';
 import { getCookie } from '../Cookies';
 import { ToastContainer,toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
-import url from '../Url';
-var title = ""
-var name = ""
-function AddProductCategory(){
 
-    const navigate = useNavigate();
+import url from '../Url';
+var parameter = ""
+var count = ""
+
+function AddCounter(){
+
+
    var token = getCookie("token")
-   // axios.defaults.headers.common['Authorization'] = "Bearer "+ token;
-   // axios.defaults.headers.common['Accept'] = 'multipart/form-data'
-   // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
    console.log("token" , token)
-   const handleName =(event)=>{
-    name = event.target.value
-    console.log(name)
+   const handleParameter =(event)=>{
+    parameter = event.target.value
+    console.log(parameter)
  }
-    const handleTitle =(event)=>{
-        title = event.target.value
-        console.log(title)
+    const handleCount =(event)=>{
+        count = event.target.value
+        console.log(count)
      }
-     
 const handleClick = () =>{
       var formBody = {
-         "productcategory": name,
-         "modelNum": title,
+         "parameter": parameter,
+         "count": count
         
    }
-   axios.post(url+"/productcategory",
+   axios.post(url+"/successCount",
    formBody, {
       headers: {
       "Content-Type" : "multipart/form-data",
@@ -41,8 +38,8 @@ const handleClick = () =>{
    
    ).then(function (response) {
       if (response.status == 200) {
-         console.log("solution added")
-         toast('Product Category Added Successfully', {
+         console.log("Counter added")
+         toast('Counter Added Successfully', {
             position: "bottom-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -64,24 +61,21 @@ return(
     <div className="form-contain">
             <div class="wrapper-form">
     <div class="title-form">
-      Add Product Category
+      Add Home Page Counter
     </div>
     <div class="form-1">
         <div class="inputfield">
-          <label>Category Name</label>
-          <input type="text" onChange={handleName} class="input"/>
+          <label>Parameter</label>
+          <input type="text" onChange={handleParameter} class="input"/>
        </div> 
        <div class="inputfield">
-          <label>Model Number</label>
-          <input type="text" onChange={handleTitle} class="input"/>
+          <label>Count</label>
+          <input type="text" onChange={handleCount} class="input"/>
        </div>  
-        
-       
-       
       <div class="inputfield">
         <input type="submit" value="Register" onClick={handleClick} class="btn"/>
       </div>
-      
+    
     </div>
 </div>
 </div>
@@ -101,4 +95,4 @@ return(
 )
 }
 
-export default AddProductCategory;
+export default AddCounter;

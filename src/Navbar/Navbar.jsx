@@ -32,11 +32,12 @@ const Navbar = () => {
             <div className="z-50 p-5 md:w-auto w-full flex justify-between ">
               <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/MAVS LOGO-1-02.png" alt="logo" className='logo-img md:cursor-pointer' onClick={()=>handleClick()}/>
         
-              <div className="text-3xl md:hidden icon1 text-white" onClick={()=>setOpen(!open)}>
+              
+            </div>
+            <div className="text-3xl md:hidden icon1 text-white openbutton" onClick={()=>setOpen(!open)}>
               {/* <ion-icon name={`${open ? "close" : "menu"}`}></ion-icon> */}
               <FontAwesomeIcon icon={faBars} style={{ color: "white", fontSize: "30px" }}/>
                 </div>
-            </div>
             <ul className='md:flex hidden uppercase items-center gap-5 font-[Poppins]'>
               {/* <li className='py-7 px-2 inline-block md:cursor-pointer navbar-links'>
                 Home
@@ -59,7 +60,10 @@ const Navbar = () => {
                 Home
               </li> */}
               <NavLinks/>
-
+              <div className="closebutton">
+              <ion-icon name="close"  onClick = {()=>setOpen(!open)}></ion-icon>
+              </div>
+        
           </ul>
           
         </div>

@@ -45,3 +45,9 @@
 .space-anime{
     width: 200px;
 }
+
+@media(min-width: 1700px){
+    .animation-container{
+        margin-top: 1120px;
+    }
+}
