@@ -115,8 +115,16 @@
 }
 
 .producthigh{
-    padding-left: 200px;
+    padding-left: 0px;
     margin-top: 20px;
+}
+.producthigh1 h2{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    color: #2F3132;
+    margin-bottom: 20px;
+    margin-left: 200px;
 }
 .producthigh h1{
     font-weight: 700;
@@ -168,6 +176,9 @@
     } */
     .specsrow{
         margin-left: 0 !important;
+    }
+    .producthigh1 h2{
+        margin-left: 0px;
     }
 }
 @media (max-width: 768px)

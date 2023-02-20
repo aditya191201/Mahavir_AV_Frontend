@@ -486,6 +486,14 @@
         right: 50%; */
 
     }
+    .videotxt{
+        margin-top: 35px;
+    }
+}
+@media screen and (width<390px) {
+    .videotxt{
+        margin-top: 0;
+    }
 }
 @media screen and (width<330px){
     .readmore{

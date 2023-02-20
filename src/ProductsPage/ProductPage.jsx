@@ -14,6 +14,7 @@ import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Row } from 'react-bootstrap/esm';
 import ProductSpecification from './ProductSpecification';
+import PopUp from './PopUp';
 var title1 = ""
 function ProductPage() {
   const [products1, setProducts] = useState([])
@@ -121,33 +122,34 @@ function ProductPage() {
             <button onClick={() => { downloadFileAtURL(products1.brochureLink) }}>
               <FontAwesomeIcon icon={faFile} style={{ fontSize: '30px', marginRight: '10px', marginTop: '10px' }} />
               Download Broucher</button>
+            <PopUp/>
           </div>
         </div>
         <div>
           <Row>
             {/* <h4 className="rowtitle">Model Number: <b>{product.modelNumber}</b> </h4> */}
-            <Row style={{ borderBottom: '1px solid #E2E2E2' }} className= "producthigh">
+            <Row style={{ borderBottom: '1px solid #E2E2E2' }} className="producthigh1">
               <h2>Specifications</h2>
             </Row>
             <div className='specsrow'>
-            <Row>
-              {
-                (isKeysFetched) ? (
-                  keys.map(k => {
-                    return (
+              <Row>
+                {
+                  (isKeysFetched) ? (
+                    keys.map(k => {
+                      return (
 
-                      <ProductSpecification title={k.split('').reverse().join('')} product={products1} />
+                        <ProductSpecification title={k.split('').reverse().join('')} product={products1} />
 
-                    );
-                  })
+                      );
+                    })
 
-                ) : (
-                  null
-                )
-              }
-            </Row>
+                  ) : (
+                    null
+                  )
+                }
+              </Row>
             </div>
-           
+
           </Row>
         </div>
         <div>

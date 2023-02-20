@@ -68,7 +68,7 @@ const handleClick = () =>{
 
 return(
     <>
-    {/* <AdminNavbar/> */}
+    <AdminNavbar/>
     <div className="form-contain">
             <div class="wrapper-form">
     <div class="title-form">

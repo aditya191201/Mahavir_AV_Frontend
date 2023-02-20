@@ -50,13 +50,13 @@ function Footer(){
         <br></br>
         <div className='icon-with-text'>
           <GoMail color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;<a href="mailto:mahaviravsolutions@gmail.com?subject=Mail">mahaviravsolutions@gmail.com</a></p>
+          <p>&nbsp;&nbsp;<a href="mailto:sushil@mahaviravsolutions.in?subject=Mail">sushil@mahaviravsolutions.in</a></p>
 
         </div>
         <br></br>
         <div className='icon-with-text'>
           <BiPhone color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;<a href="tel:0712-232435">0712-232435</a></p>
+          <p>&nbsp;&nbsp;<a href="tel:+91-9890202233">+91-9890202233</a></p>
 
         </div>
         <br></br>
