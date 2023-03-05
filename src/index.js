@@ -47,6 +47,9 @@ import AddCounter from './Admin/AddCounter';
 import DeleteAllCounters from './Admin/DeleteAllCounters';
 import DeleteCounterById from './Admin/DeleteCounterById';
 import AddSpecification from './Admin/AddSpecification';
+import AdminLogin from './Admin/AdminLogin';
+import AddNavbar from './Admin/AddNavbar';
+import DeleteNavbar from './Admin/DeleteNavbar';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -64,6 +67,9 @@ root.render(
     <Route path = '/product' element = {<ProductPage/>}/>
     <Route path = '/home' element = {<Home1/>}/>
     <Route path = '/contactus' element = {<Contact1/>}/>
+    <Route path = '/admin' element = {<AdminLogin/>}/>
+    <Route path = 'add-counter' element = {<AddCounter/>}/>
+    <Route path = '/add-navbar' element = {<AddNavbar/>}/>
     <Route path = '/add-counter' element = {<AddCounter/>}/>
     <Route path = '/add-solution' element = {<AddSolution/>}/>
     <Route path = '/add-product' element = {<AddProduct/>}/>
@@ -95,6 +101,7 @@ root.render(
     <Route path = '/delete-home-cover' element = {<DeleteHomeCover/>}/>
     <Route path = '/delete-counters' element = {<DeleteAllCounters/>}/>
     <Route path = '/delete-counters-id' element = {<DeleteCounterById/>}/>
+    <Route path = '/delete-navbar' element = {<DeleteNavbar/>}/>
     <Route path = '/trial' element = {<NavTrial/>}/>
     <Route path = '/blog' element = {<Blog/>}/>
     <Route path = '/blog-main' element = {<BlogMain/>}/>

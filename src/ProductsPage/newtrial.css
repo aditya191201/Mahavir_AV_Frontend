@@ -43,8 +43,12 @@
   
 .thumbnail{
   padding-left: 20px;
-  width:100px;
-  height: 100px;
+  height: 70px !important;
+  width: auto;
+}
+.thumbnail img{
+    height: 100px;
+    width: auto;
 }
 .clicked{
   border: 5px solid black;

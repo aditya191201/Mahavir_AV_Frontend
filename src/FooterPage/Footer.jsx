@@ -30,8 +30,8 @@ function Footer(){
       <div className='rightside'>
         <h1 className='leftside'>Important Links</h1>
       <div className='foot-content'>
-        <h2>Terms And Conditions <br></br></h2>
-        <h2>Privacy Policy <br></br></h2>
+        
+        <a href="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/MAVS_Privacy_Policy.pdf" target="_blank"><h2>Privacy Policy <br></br></h2></a>
       </div>
         
       </div>

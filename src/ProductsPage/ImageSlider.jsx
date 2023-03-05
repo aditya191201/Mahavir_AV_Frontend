@@ -51,7 +51,10 @@ function ImageSlider() {
         
       <div className="app">
         <div className="details">
-            {(imgs[0]!=null) ? (<img src={wordData.value} className="big-img" /> ) : (<img src={wordData} className="big-img" /> )}
+          <div className="div-bigimg">
+          {(imgs[0]!=null) ? (<img src={wordData.value} className="big-img" /> ) : (<img src={wordData} className="big-img" /> )}
+          </div>
+            
         
         <div className='flex_row'>
           {imgs.map((data,i)=>
@@ -60,9 +63,10 @@ function ImageSlider() {
           </div>
           )}
         </div>
+        
+        </div>
         <div className="row">
             <h1>{localStorage.getItem("productname")}</h1>
-        </div>
         </div>
       </div>
       </>

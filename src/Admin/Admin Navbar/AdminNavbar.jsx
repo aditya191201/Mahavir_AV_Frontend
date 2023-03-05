@@ -7,6 +7,10 @@ const AdminNavbar = () => {
   const [open,setOpen] = useState(false);
   const [sticky,setSticky] = useState(false);
   const navigate = useNavigate();
+  const handleClick1 = () => {
+    localStorage.setItem("login", "false")
+    navigate("/admin")
+  }
   useEffect(()=>{
     const handleScroll = () =>{
       setSticky(window.scrollY);
@@ -37,6 +41,7 @@ const AdminNavbar = () => {
             </NavLink>
           </li> */}
           <AdminNavlinks/>
+          <div style={{color: "white"}} onClick = {handleClick1} className= "md:cursor-pointer">Logout</div>
             </ul>
           {/* Mobile Nav */}
           <ul className={`
@@ -47,7 +52,7 @@ const AdminNavbar = () => {
                 Home
               </li> */}
               <AdminNavlinks/>
-
+              
           </ul>
 
         </div>

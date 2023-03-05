@@ -18,6 +18,7 @@ import styles from "../aboutus/Picture.module.css";
 import '../Solcat/solcat.css';
 import url from '../Url';
 import Footer from '../FooterPage/Footer';
+import PopUp_Sol from './PopUp_Sol';
 
 function Solution() {
    const[solution,setSolution] = useState([])
@@ -39,6 +40,8 @@ function Solution() {
       })
       }
    })
+
+   localStorage.setItem("solutionName",solution.title)
 
    return (
       
@@ -96,7 +99,9 @@ function Solution() {
             ): (null)}
             
          </div>
-
+            <div className="download-broucher">
+               <PopUp_Sol />
+            </div>
          <div>
          <div className='categoryh1'><h1>Available Implementation</h1></div>
          

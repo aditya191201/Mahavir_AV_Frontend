@@ -4,7 +4,8 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
         {name:'Add Home Video', link:'/add-home-video'},
         {name:'Add Home Description', link:'/add-home-description'},
         {name:'Add Home Achievements',link:'/add-achievements'},
-        {name:'Add Home Counter', link:'/add-counter'}
+        {name:'Add Home Counter', link:'/add-counter'},
+        {name:'Add Navbar',link:'/add-navbar'}
     ]}
 ]}, 
 {name: 'Add Excel', mainlink:"", submenu:true, sublinks:[
@@ -47,7 +48,8 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
                 { name:'Delete Solution Category', link: '/delete-solution-category'},
                 { name:'Delete Products', link: '/delete-products'},
                 { name:'Delete Product Category', link: '/delete-product-category'},
-                { name:'Delete All Counters', link:'/delete-counters'}
+                { name:'Delete All Counters', link:'/delete-counters'},
+                { name:'Delete Navbar', link: '/delete-navbar'}
             ]
         },
        

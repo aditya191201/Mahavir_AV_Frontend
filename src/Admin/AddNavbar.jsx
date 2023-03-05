@@ -6,14 +6,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
-import { useState } from 'react';
 import url from '../Url';
-var title = ""
-var description = ""
-var coverimg = ""
+
+var mainlink = ""
+var submenu = ""
 var name = ""
-function AddFeatures() {
-   const [clicked1, setIsClicked] = useState(false)
+function AddNavbar() {
    var isLogin = localStorage.getItem("login")
    const navigate = useNavigate();
    var token = getCookie("token")
@@ -25,29 +23,24 @@ function AddFeatures() {
       name = event.target.value
       console.log(name)
    }
-   const handleTitle = (event) => {
-      title = event.target.value
-      console.log(title)
+   const handleSubmenu = (event) => {
+      submenu = event.target.value
+      console.log(submenu)
    }
-   const handleDescription = (event) => {
-      description = event.target.value
-      console.log(description)
+   const handleMainlink = (event) => {
+      mainlink = event.target.value
+      console.log(mainlink)
    }
-   const handleCoverimg = (event) => {
-      coverimg = event.target.value
-      console.log(coverimg)
-   }
-   function handleClick1() {
-      setIsClicked(true)
-   }
+
+
    const handleClick = () => {
       var formBody = {
-         "name": title,
-         "description": description,
-         "icon": coverimg,
+         "name": name,
+         "mainlink": mainlink,
+         "submenu": submenu,
 
       }
-      axios.post(url + "/solutionfeatures/" + name,
+      axios.post(url + "/navbar",
          formBody, {
          headers: {
             "Content-Type": "multipart/form-data",
@@ -57,8 +50,8 @@ function AddFeatures() {
 
       ).then(function (response) {
          if (response.status == 200) {
-            console.log("solution added")
-            toast('Solution Feature Added Successfully', {
+            console.log("Navbar added")
+            toast('Navbar Details Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
                hideProgressBar: false,
@@ -83,31 +76,24 @@ function AddFeatures() {
                <div className="form-contain">
                   <div class="wrapper-form">
                      <div class="title-form">
-                        Add Solution Features
+                        Add Navbar Details
                      </div>
                      <div class="form-1">
                         <div class="inputfield">
-                           <label>Solution Name</label>
+                           <label>Navbar Name</label>
                            <input type="text" onChange={handleName} class="input" />
                         </div>
                         <div class="inputfield">
-                           <label>Feature Name</label>
-                           <input type="text" onChange={handleTitle} class="input" />
+                           <label>Main Link</label>
+                           <input type="text" onChange={handleMainlink} class="input" />
                         </div>
                         <div class="inputfield">
-                           <label>Description</label>
-                           <textarea class="textarea" onChange={handleDescription}></textarea>
-                        </div>
-                        <div class="inputfield">
-                           <label>Icon</label>
-                           <input type="text" onChange={handleCoverimg} class="input" />
+                           <label>Submenu True or False </label>
+                           <input type="text" onChange={handleSubmenu} class="input"></input>
                         </div>
 
                         <div class="inputfield">
                            <input type="submit" value="Register" onClick={handleClick} class="btn" />
-                        </div>
-                        <div class="inputfield">
-                           <input type="submit" value="Add more Features" onClick={handleClick1} class="btn" />
                         </div>
 
                      </div>
@@ -124,14 +110,11 @@ function AddFeatures() {
                   draggable
                   pauseOnHover
                   theme="dark"
-               />
-               {(clicked1) ? (<AddFeatures />
-               ) : (null)}
-            </>) : (<><h1>Error: Not Logged IN</h1></>)
+               /></>) : (<><h1>Error: Not Logged IN</h1></>)
          }
 
       </>
    )
 }
 
-export default AddFeatures;
+export default AddNavbar;

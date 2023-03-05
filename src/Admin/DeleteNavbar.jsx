@@ -7,27 +7,19 @@ import AdminNavbar from "./Admin Navbar/AdminNavbar";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-var description = ""
-
-function DeleteHomeCover() {
-  var token = getCookie("token")
+function DeleteNavbar() {
   var isLogin = localStorage.getItem("login")
-
-  const handleDescription = (event) => {
-    description = event.target.value
-    console.log(description)
-  }
+  var token = getCookie("token")
   const handleClick = () => {
-
-    axios.delete(url + "/deleteHomeCover/" + description, {
+    axios.delete(url + "/deleteNavbar", {
       headers: {
         "Content-Type": "multipart/form-data",
         "Authorization": "Bearer " + token
       }
     }).then(function (response) {
       if (response.status == 200) {
-        console.log("DELETE", "Home Cover")
-        toast('Home Cover Deleted Successfully', {
+        console.log("DELETE", "Navbar deleted")
+        toast('Navbar Deleted Successfully', {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -51,16 +43,12 @@ function DeleteHomeCover() {
           <div className="form-contain">
             <div class="wrapper-form">
               <div class="title-form">
-                Delete Home Cover
+                Delete Navbar
               </div>
               <div class="form-1">
                 <div class="inputfield">
                   <br /><br /><br /><br /><br />
-                  <div class="inputfield">
-                    <label>Description</label>
-                    <input type="text" onChange={handleDescription} class="input" />
-                  </div>
-                  <input type="submit" value="Delete Home Cover" onClick={handleClick} class="btn" />
+                  <input type="submit" value="Delete Navbar" onClick={handleClick} class="btn" />
                 </div>
               </div>
             </div>
@@ -83,4 +71,4 @@ function DeleteHomeCover() {
   )
 }
 
-export default DeleteHomeCover
+export default DeleteNavbar

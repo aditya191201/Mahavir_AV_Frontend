@@ -60,6 +60,7 @@ const AdminNavlinks = () => {
                     </div>
                 </div>}
             </div>
+            {/* <div>Logout</div> */}
             {/* Mobile view */}
             <div className="ulsticky bg-black">
                 {link.submenu && <div> 
