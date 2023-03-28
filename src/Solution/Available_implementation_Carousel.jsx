@@ -7,14 +7,14 @@ import { useEffect } from "react";
 import axios from "axios";
 // import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGreaterThan,faLessThan } from "@fortawesome/free-solid-svg-icons";
+import { faGreaterThan, faLessThan } from "@fortawesome/free-solid-svg-icons";
 import url from "../Url";
 const PreviousBtn = (props) => {
   // console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FontAwesomeIcon icon= {faLessThan} style={{ color: "blue", fontSize: "30px" }} className="carouselicon"/>
+      <FontAwesomeIcon icon={faLessThan} style={{ color: "blue", fontSize: "30px" }} className="carouselicon" />
     </div>
   );
 };
@@ -22,30 +22,29 @@ const NextBtn = (props) => {
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
-      <FontAwesomeIcon icon={faGreaterThan} style={{ color: "blue", fontSize: "30px" }} className = "carouselicon" />
+      <FontAwesomeIcon icon={faGreaterThan} style={{ color: "blue", fontSize: "30px" }} className="carouselicon" />
     </div>
   );
 };
 
 const Carousel = () => {
-  
-const[solution,setSolution] = useState([])
-const[isSolutionFetched, setIsSolutionFetched] = useState(false)
-useEffect(()=>{
-   if(!isSolutionFetched)
-   {
-      axios.get(url+"/getSolutions/"+localStorage.getItem('solname')).then(function(response){
-     if(response.status == 200){
-       setSolution(response.data)
-       setIsSolutionFetched(true)
-       console.log(response.data)
-       console.log("solution" , solution)
-     }
-   }).catch(function(error){
-     console.log("error",error)
-   })
-   }
-})
+
+  const [solution, setSolution] = useState([])
+  const [isSolutionFetched, setIsSolutionFetched] = useState(false)
+  useEffect(() => {
+    if (!isSolutionFetched) {
+      axios.get(url + "/getSolutions/" + localStorage.getItem('solname')).then(function (response) {
+        if (response.status == 200) {
+          setSolution(response.data)
+          setIsSolutionFetched(true)
+          console.log(response.data)
+          console.log("solution", solution)
+        }
+      }).catch(function (error) {
+        console.log("error", error)
+      })
+    }
+  })
   return (
     <div style={{ margin: "30px" }} className="carousel">
       <Slider
@@ -79,15 +78,26 @@ useEffect(()=>{
             <img src={item} alt="" style={{ width: "100%", height: "100%" }} />
           </div>
         ))} */}
-        <div>
-            <img src={solution.solimg1} alt="" style={{ width: "100%", height: "100%" }} />
-          </div>
+
+        {
+          (solution.solimg1 != "") ? (
+            <div>
+              <img src={solution.solimg1} alt="" style={{ width: "100%", height: "100%" }} />
+            </div>
+          ) : (null)
+        }
+        {(solution.solimg2 != "") ? (
           <div>
             <img src={solution.solimg2} alt="" style={{ width: "100%", height: "100%" }} />
           </div>
+        ) : (null)}
+        {
+          (solution.solimg3 != "") ? (
           <div>
             <img src={solution.solimg3} alt="" style={{ width: "100%", height: "100%" }} />
-          </div>
+          </div>) : (null)
+        }
+
       </Slider>
     </div>
   );

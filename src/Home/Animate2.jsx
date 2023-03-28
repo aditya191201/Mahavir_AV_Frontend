@@ -4,35 +4,44 @@ import './Animate2.css';
 import './Animations.css';
 import './MycssSZ.css';
 import './headcontent.css';
-const Animate2=()=>{
-    return(
+const Animate2 = () => {
+    return (
         <>
             <div className="animation-container">
                 {/* <h1 className="head-content">Our Qualities</h1> */}
                 <div >
-                    <Animate1/>
+                    <Animate1 />
                 </div>
                 <div className="space-anime">
 
                 </div>
                 <div>
-                <div className='gifs2' >
-                            <div className='animedes1' >
-                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/open.mp4" autoPlay loop muted />
-                            </div>
-                            <div className='animedes1' >
-                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/verify.mp4" autoPlay loop muted />
-                            </div>
+                    <div className='gifs2' >
+                        <div className='animedes1' >
+                            <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/open.mp4" autoPlay loop muted />
+                        </div>
+                        <div className='animedes1' >
+                            <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/verify.mp4" autoPlay loop muted />
+                        </div>
                     </div>
                     <div className='gifs2' >
-                            <div className='animedes1' >
-                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/cloud.mp4" autoPlay loop muted />
-                            </div>
-                            <div className='animedes1' >
-                                <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/tickmark.mp4" autoPlay loop muted />
-                            </div>
+                        <div className='animedes1' >
+                            <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/cloud.mp4" autoPlay loop muted />
+                        </div>
+                        <div className='animedes1' >
+                            <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/tickmark.mp4" autoPlay loop muted />
+                        </div>
                     </div>
                 </div>
+                {/* <div className="animedes1">
+                    <div>
+                        <h2>IN THE COMING YEARS</h2>
+                    </div>
+                    <br />
+                    <div>
+                        <p>IN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARS</p>
+                    </div>
+                </div> */}
             </div>
         </>
     )

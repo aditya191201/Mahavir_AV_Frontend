@@ -78,7 +78,7 @@ function AddSpecification() {
                         </div>
                         <div class="inputfield">
                            <label>Specification</label>
-                           <input type="text" onChange={handleSpecification} class="input" />
+                           <textarea class="textarea" onChange={handleSpecification}  > </textarea>
                         </div>
                         <div class="inputfield">
                            <input type="submit" value="Register" onClick={handleClick} class="btn" />

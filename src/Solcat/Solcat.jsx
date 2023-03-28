@@ -16,6 +16,8 @@ function Solcat() {
     const [isSolutioncategoryFetched, setIsSolutioncategoryFetched] = useState(false)
     const navigate = useNavigate();
     useEffect(() => {
+        document.title = 'Our Solutions - MAVS'
+        window.scrollTo(0, 0)
         if (!isSolutioncategoryFetched) {
             axios.get(url + "/getsolcategorydetail").then(function (response) {
                 if (response.status == 200) {
@@ -56,37 +58,42 @@ function Solcat() {
             </div>
 
             {solutioncategory.map(category => (
+                
+                <>{console.log(category.solutions.length)}<br /><br />
+                    {(category.solutions.length == 0)  ?(null) : (
+                        <>
+                            <div className="categoryh1"><h1>{category.category}</h1></div>
+                            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+                                {category.solutions.map(solution1 => (
+                                    <div >
+                                        {/* <BCard image = {solution1.coverimg} name = {solution1.title} description = {solution1.description}/> */}
+                                        <div className="benCard">
+                                            <div class="card-bene">
+                                                <div class="card-image-bene">
+                                                    <img src={solution1.coverimg} alt="" />
+                                                </div>
+                                                <h2>{solution1.title}</h2>
+                                                <div className="card-text"><p>{solution1.description}.....
+                                                </p></div>
 
-                <><br /><br />
-                    <div className="categoryh1"><h1>{category.category}</h1></div>
-                    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
-                        {category.solutions.map(solution1 => (
-                            <div >
-                                {/* <BCard image = {solution1.coverimg} name = {solution1.title} description = {solution1.description}/> */}
-                                <div className="benCard">
-                                    <div class="card-bene">
-                                        <div class="card-image-bene">
-                                            <img src={solution1.coverimg} alt="" />
+                                                <div style={{ marginLeft: 20 }}>
+                                                    <button onClick={() => handleClick(category.category, solution1)}>Know More</button>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                        <h2>{solution1.title}</h2>
-                                        <div className="card-text"><p>{solution1.description}.....
-                                        </p></div>
-
-                                        <div style={{ marginLeft: 20 }}>
-                                            <button onClick={() => handleClick(category.category, solution1)}>Know More</button>
-                                        </div>
-
                                     </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
+                        </>
+                    )}
+
                     <div>
-                        
+
                     </div>
                 </>
             ))}
-            <Footer/>
+            <Footer />
         </>
 
 

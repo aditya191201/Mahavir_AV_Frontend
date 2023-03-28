@@ -6,41 +6,44 @@ import { useNavigate } from 'react-router-dom';
 import url from '../Url';
 import './contenthome.css';
 
-function Videotxt(){
+function Videotxt() {
   const navigate = useNavigate()
-  const[homeCover, setHomeCover] = useState([])
-  const[isHomeCoverFetched , setIsHomeFetched] = useState(false) 
-  useEffect(()=>{
-    if(!isHomeCoverFetched)
-    {
-      axios.get(url+"/gethomecover").then(function(response){
-        if(response.status == 200){
+  const [homeCover, setHomeCover] = useState([])
+  const [isHomeCoverFetched, setIsHomeFetched] = useState(false)
+  useEffect(() => {
+    if (!isHomeCoverFetched) {
+      axios.get(url + "/gethomecover").then(function (response) {
+        if (response.status == 200) {
           setHomeCover(response.data)
           setIsHomeFetched(true)
           console.log(response.data)
-          console.log("products" , homeCover)
+          console.log("products", homeCover)
         }
-      }).catch(function(error){
-        console.log("error",error)
+      }).catch(function (error) {
+        console.log("error", error)
       })
     }
-  }) 
-  function handleClick(){
+  })
+  function handleClick() {
     navigate('/aboutus')
   }
   return (
-  
-    <div className='videotxt'>
-       {homeCover.map(cover=>(
-        <p className='content-home-main'>
-          {cover.description}
-        </p>
-       ))}
+    <>
+    {
+      (homeCover[0] != null) ? (<>
+      <div className='videotxt'>
+          <p className='content-home-main'>
+            {homeCover[0].description}
+          </p>
         <div className='readmore'>
-					<a onClick={()=>handleClick()}>Read More</a>
-				</div>
-    </div>
-   
+          <a onClick={() => handleClick()}>Read More</a>
+        </div>
+      </div></>) : (null)
+    }
+      
+    </>
+
+
   )
 }
 

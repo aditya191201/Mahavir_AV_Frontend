@@ -81,6 +81,8 @@ const MultiItemCarousel1 = () => {
   const[productCat, setProductsCat] = useState([])
   const[isProductCatFetched , setIsProductCatFetched] = useState(false) 
   useEffect(()=>{
+    document.title = 'Our Products - MAVS'
+    window.scrollTo(0, 0)
     if(!isProductCatFetched)
     {
       axios.get(url+"/getproductcategory").then(function(response){
@@ -102,7 +104,7 @@ const MultiItemCarousel1 = () => {
     localStorage.setItem("img",item.productimg)
     localStorage.setItem('modelNum',modelnum)
     console.log("model number",modelnum)
-    navigate('/product');
+    navigate('/product/'+modelnum);
   }
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -167,6 +169,7 @@ const MultiItemCarousel1 = () => {
     {
         productCat.map(data1 => (
             <div style={{ margin: '30px' }} className='carousel'>
+              {(data1.products.length != 0) ? (<>
                 <h1>{data1.title}</h1>
                 <Slider {...carouselProperties}>
                     {/* {
@@ -180,6 +183,8 @@ const MultiItemCarousel1 = () => {
                       ))
                     }
                 </Slider>
+              </>) : (null)}
+                
             </div>
            
         ))

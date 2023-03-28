@@ -9,7 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import url from '../Url';
 var title = ""
 var name = ""
-var finalTitle = ""
+
 function AddProductCategory() {
    const numbers = [1, 2, 3, 4, 5]
    console.log(numbers)
@@ -27,12 +27,9 @@ function AddProductCategory() {
    }
    const handleTitle = (event) => {
       title = event.target.value
-
-      finalTitle = title.split(";")
-      // setProduct(title.split(";"))
-      console.log(finalTitle)
+      console.log(title)
    }
-   console.log("outside", finalTitle)
+  
 
    const handleClick = () => {
       var formBody = {

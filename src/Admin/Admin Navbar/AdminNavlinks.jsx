@@ -40,7 +40,7 @@ const AdminNavlinks = () => {
                         <div className="py-3">
                             <div className="w-4 h-4 left-3 absolute mt-1 bg-white rotate-45"></div>
                         </div>
-                        <div className="bg-black p-3.5 grid grid-cols-3">
+                        <div className="bg-black p-3.5 grid grid-cols-2">
                             {
                                 link.sublinks.map((mysublinks)=>(
                                     <div>

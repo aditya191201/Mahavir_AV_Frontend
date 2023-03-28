@@ -21,14 +21,24 @@ function Main(){
     }
   }) 
   return (
-    <div className='main'>
+    <>
+    {
+      (homeCover[0] != null) ? (
+      <>
+      <div className='main'>
         <div className="overlay"></div>
         {/* <video src={videoBg} autoPlay loop muted /> */}
-        {homeCover.map(cover=>(
+        {/* {homeCover.map(cover=>(
            <video src={cover.video} autoPlay loop muted /> 
-        ))}
-        
+        ))} */}
+        <video src={homeCover[0].video} autoPlay loop muted /> 
     </div>
+      </>) : (null)
+    }
+    
+    
+    </>
+    
   )
 }
 

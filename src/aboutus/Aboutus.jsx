@@ -9,6 +9,7 @@ import Footer from '../FooterPage/Footer';
 function Aboutus(){
     useEffect(()=>{
         window.scrollTo(0,0);
+        document.title = 'About Us - MAVS'
     })
     return(
     <>

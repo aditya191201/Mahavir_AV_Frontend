@@ -50,6 +50,10 @@ import AddSpecification from './Admin/AddSpecification';
 import AdminLogin from './Admin/AdminLogin';
 import AddNavbar from './Admin/AddNavbar';
 import DeleteNavbar from './Admin/DeleteNavbar';
+import ProductsUsed from './Solution/Products_Used';
+import OurTeam from './OurDevelopers/OurTeam';
+import UpdateSolution from './Admin/UpdateSolution';
+import AddSpecification1 from './Admin/AddSpecification1';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -64,16 +68,17 @@ root.render(
     <Route path = '/solution/:category/:link' element = {<Solution/>}/>
     {/* <Route path = '/solution' element = {<Solution/>}/> */}
     <Route path = '/solutioncategory' element = {<Solcat/>}/>
-    <Route path = '/product' element = {<ProductPage/>}/>
+    <Route path = '/product/:link' element = {<ProductPage/>}/>
     <Route path = '/home' element = {<Home1/>}/>
     <Route path = '/contactus' element = {<Contact1/>}/>
     <Route path = '/admin' element = {<AdminLogin/>}/>
+    <Route path = '/productused' element = {<ProductsUsed/>}/>
     <Route path = 'add-counter' element = {<AddCounter/>}/>
     <Route path = '/add-navbar' element = {<AddNavbar/>}/>
     <Route path = '/add-counter' element = {<AddCounter/>}/>
     <Route path = '/add-solution' element = {<AddSolution/>}/>
     <Route path = '/add-product' element = {<AddProduct/>}/>
-    <Route path = '/add-specifications' element = {<AddSpecification/>}/>
+    <Route path = '/add-specifications' element = {<AddSpecification1/>}/>
     <Route path = '/add-solution-benefits' element = {<AddBenefits/>}/>
     <Route path = '/add-solution-features' element = {<AddFeatures/>}/>
     <Route path = '/add-solution-category' element = {<AddSolCategory/>}/>
@@ -106,6 +111,8 @@ root.render(
     <Route path = '/blog' element = {<Blog/>}/>
     <Route path = '/blog-main' element = {<BlogMain/>}/>
     <Route path = '/popup' element = {<PopUp/>}/>
+    <Route path = '/developers' element = {<OurTeam/>}/>
+    <Route path = '/update-solution' element = {<UpdateSolution/>}/>
   </Routes>
   </HashRouter>
   </>

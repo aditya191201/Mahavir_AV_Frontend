@@ -49,7 +49,7 @@ function ProductPage() {
       })
 
     }
-
+    document.title = products1.productName + " - MAVS"
   })
 
 
@@ -82,13 +82,16 @@ function ProductPage() {
       {/* <NewTrial/> */}
       <div className="product-total">
         <ImageSlider />
-        <div>
-          <div className="product_desc">
-            <p>
-              {products1.productHighlights}
-            </p>
+        {(products1.productHighlights != "") ? (
+          <div>
+            <div className="product_desc">
+              <p>
+                {products1.productHighlights}
+              </p>
+            </div>
           </div>
-        </div>
+        ) : (null)}
+      
         <div className="section-container">
           <div className="columns image1">
             <img src={products1.productImage1} alt="" />
@@ -98,11 +101,25 @@ function ProductPage() {
               <h1>Product Highlights</h1>
               {
                 products1.additionalFeatures.map(feature => (
-                  <div className="productdesc1">
+                  // <div className="productdesc1">
+                  //   <h2>
+                  //     <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
+                  //   </h2>
+                  // </div>
+                  (feature.title == "") ? (
+                    <div className="productdesc1">
+                    <h2>
+                      <span>{feature.description}</span>
+                    </h2>
+                  </div>
+                  ) : (
+                    <div className="productdesc1">
                     <h2>
                       <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
                     </h2>
                   </div>
+                  )
+                  
                 ))
               }
             </div>
@@ -115,43 +132,39 @@ function ProductPage() {
          <br />
          <br />
         </div> */}
-        <ProductFeature />
+        {(products1.productDescriptions != null) ? (
+          <ProductFeature />
+        ) : (null)}
+        
         <div>
           <div className="download-broucher">
+            <button onClick={() => { downloadFileAtURL(products1.brochureLink) }} >
 
-            <button onClick={() => { downloadFileAtURL(products1.brochureLink) }}>
+
               <FontAwesomeIcon icon={faFile} style={{ fontSize: '30px', marginRight: '10px', marginTop: '10px' }} />
               Download Broucher</button>
-            <PopUp/>
+            <PopUp />
           </div>
         </div>
-        <div>
-          <Row>
-            {/* <h4 className="rowtitle">Model Number: <b>{product.modelNumber}</b> </h4> */}
-            <Row style={{ borderBottom: '1px solid #E2E2E2' }} className="producthigh1">
-              <h2>Specifications</h2>
-            </Row>
-            <div className='specsrow'>
+        {
+          (products1.specifications != null) ? (<>
+            <div>
               <Row>
-                {
-                  (isKeysFetched) ? (
-                    keys.map(k => {
-                      return (
+                {/* <h4 className="rowtitle">Model Number: <b>{product.modelNumber}</b> </h4> */}
+                <Row style={{ borderBottom: '1px solid #E2E2E2' }} className="producthigh1">
+                  <h2>Specifications</h2>
+                </Row>
+                <div className='specsrow'>
+                  <Row>
+                      <ProductSpecification product={products1} />
+                  </Row>
+                </div>
 
-                        <ProductSpecification title={k.split('').reverse().join('')} product={products1} />
-
-                      );
-                    })
-
-                  ) : (
-                    null
-                  )
-                }
               </Row>
             </div>
+          </>) : (null)
+        }
 
-          </Row>
-        </div>
         <div>
           <Footer />
         </div>

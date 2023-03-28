@@ -22,7 +22,8 @@
 }
 .details .big-img{
     height: 430px;
-    width: auto;
+    width: 800px;
+    object-fit: contain;
     /* max-width: 500px;
     min-width: 290px;
     overflow: hidden;
@@ -126,7 +127,8 @@
 }
 .section-container .image1 img{
     height: 400px;
-    width: auto;
+    width: 500px;
+    object-fit: contain;
 }
 
 .producthigh{
@@ -166,6 +168,9 @@
     color: #2F3132;
 }
 @media (max-width: 500px) {
+    .app{
+        width: 90%;
+    }
     .thumb{
         height: 50px;
     }
@@ -228,6 +233,20 @@
     
 }
 
+.download-broucher a{
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50px;
+    color: white;
+    padding: 2px 20px;
+    display: flex;
+    text-align: center;
+    margin-top:10px;
+    /* margin-left: 36px; */
+    text-decoration: none;
+    width: 200px;
+    /* padding: 10px; */
+    font-size: 16px;
+}
 .download-broucher button{
     background: rgba(0, 0, 0, 0.8);
     border-radius: 50px;

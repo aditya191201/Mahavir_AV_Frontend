@@ -12,7 +12,8 @@ import './Contact1.css';
 const Contact1 = () => {
     const form = useRef();
     useEffect(()=>{
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        document.title = 'Contact Us - MAVS'
     })
     const sendEmail = (e) => {
         e.preventDefault();

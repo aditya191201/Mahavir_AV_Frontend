@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import AddProductFeatureForm from './AddProductFeatureForm';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -37,9 +40,7 @@ function AddProductFeatures() {
       coverimg = event.target.value
       console.log(coverimg)
    }
-   function handleClick1() {
-      setIsClicked(true)
-   }
+   
    const handleClick = () => {
       var formBody = {
          "title": title,
@@ -58,6 +59,7 @@ function AddProductFeatures() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("solution added")
+            setIsClicked(true)
             toast('Product Feature Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
@@ -81,34 +83,39 @@ function AddProductFeatures() {
             (isLogin == "true") ? (<>
                <AdminNavbar />
                <div className="form-contain">
-                  <div class="wrapper-form">
+                  <div class="wrapper-form" style={{maxWidth:"900px"}}>
                      <div class="title-form">
                         Add Product Features
+                        <br /><br />
                      </div>
                      <div class="form-1">
-                        <div class="inputfield">
-                           <label>Product Number</label>
-                           <input type="text" onChange={handleName} class="input" />
+                        <div style={{ display: "flex" }}>
+                           <div class="inputfield">
+                              {/* <label>Product Number</label> */}
+                              <input type="text" onChange={handleName} class="input" placeholder='Product Number'/>
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Feature Name</label> */}
+                              <input type="text" onChange={handleTitle} class="input" placeholder='Feature Name' style={{marginLeft:"20px"}}/>
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Feature Description</label> */}
+                              <input type = "text" class="input" onChange={handleDescription} placeholder= "Description" style={{marginLeft:"20px"}}></input>
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Feature Icon</label> */}
+                              <input type="text" onChange={handleCoverimg} class="input" placeholder='Feature Icon' style={{marginLeft:"20px"}}/>
+                           </div>
+                           <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
                         </div>
-                        <div class="inputfield">
-                           <label>Feature Name</label>
-                           <input type="text" onChange={handleTitle} class="input" />
-                        </div>
-                        <div class="inputfield">
-                           <label>Feature Description</label>
-                           <textarea class="textarea" onChange={handleDescription}></textarea>
-                        </div>
-                        <div class="inputfield">
-                           <label>Feature Icon</label>
-                           <input type="text" onChange={handleCoverimg} class="input" />
-                        </div>
+                        {(clicked) ? (<AddProductFeatureForm/>) : (null)}
 
-                        <div class="inputfield">
+                        {/* <div class="inputfield">
                            <input type="submit" value="Register" onClick={handleClick} class="btn" />
                         </div>
                         <div class="inputfield">
                            <input type="submit" value="Add More Feature" onClick={handleClick1} class="btn" />
-                        </div>
+                        </div> */}
                      </div>
                   </div>
                </div>
@@ -124,7 +131,7 @@ function AddProductFeatures() {
                   pauseOnHover
                   theme="dark"
                />
-               {(clicked) ? (<AddProductFeatures />) : (null)}
+            
             </>) : (<><h1>Error: Not Logged IN</h1></>)
          }
 

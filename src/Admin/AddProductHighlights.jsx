@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import AddProductHighlightsForm from './AddProductHighlightsForm';
 var title = ""
 var description = ""
 var name = ""
@@ -32,9 +35,7 @@ function AddProductHighlights() {
       description = event.target.value
       console.log(description)
    }
-   const handleClick2 = () => {
-      setIsClicked1(true)
-   }
+ 
    const handleClick = () => {
       var formBody = {
          "title": title,
@@ -52,6 +53,7 @@ function AddProductHighlights() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("solution added")
+            setIsClicked1(true)
             toast('Product Highlights Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
@@ -75,31 +77,28 @@ function AddProductHighlights() {
             (isLogin == "true") ? (<>
                <AdminNavbar />
                <div className="form-contain">
-                  <div class="wrapper-form">
+                  <div class="wrapper-form" style={{maxWidth:"700px"}}>
                      <div class="title-form">
                         Add Product Highlights
+                        <br /><br />
                      </div>
                      <div class="form-1">
-                        <div class="inputfield">
-                           <label>Product Number</label>
-                           <input type="text" onChange={handleName} class="input" />
+                        <div style={{display:"flex"}}>
+                           <div class="inputfield">
+                              {/* <label>Product Number</label> */}
+                              <input type="text" onChange={handleName} class="input" placeholder='Product Number' />
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Highlight Name</label> */}
+                              <input type="text" onChange={handleTitle} class="input" style={{marginLeft:"20px"}} placeholder = 'Highlight Name'/>
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Feature Description</label> */}
+                              <input type = "text" class="input" onChange={handleDescription} placeholder= "Description" style={{marginLeft:"20px"}}></input>
+                           </div>
+                           <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
                         </div>
-                        <div class="inputfield">
-                           <label>Highlight Name</label>
-                           <input type="text" onChange={handleTitle} class="input" />
-                        </div>
-                        <div class="inputfield">
-                           <label>Feature Description</label>
-                           <textarea class="textarea" onChange={handleDescription}></textarea>
-                        </div>
-
-
-                        <div class="inputfield">
-                           <input type="submit" value="Register" onClick={handleClick} class="btn" />
-                        </div>
-                        <div class="inputfield">
-                           <input type="submit" value="Add more highlights" onClick={handleClick2} class="btn" />
-                        </div>
+                        {(clicked1)?(<AddProductHighlightsForm/>):(null)}
                      </div>
                   </div>
                </div>
@@ -115,7 +114,7 @@ function AddProductHighlights() {
                   pauseOnHover
                   theme="dark"
                />
-               {(clicked1) ? (<AddProductHighlights />) : (null)}
+   
             </>) : (<><h1>Error: Not Logged IN</h1></>)
          }
 

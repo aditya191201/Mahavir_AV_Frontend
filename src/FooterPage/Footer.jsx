@@ -8,6 +8,7 @@ import { ImClock } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 function Footer(){
   const navigate = useNavigate()
+  
   return (
 
     <div className='foot'>
@@ -29,9 +30,11 @@ function Footer(){
       </div>
       <div className='rightside'>
         <h1 className='leftside'>Important Links</h1>
+        
       <div className='foot-content'>
         
         <a href="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/MAVS_Privacy_Policy.pdf" target="_blank"><h2>Privacy Policy <br></br></h2></a>
+        <h2 onClick={()=>navigate("/developers")} style={{cursor: "pointer"}}>Developers<br></br></h2>
       </div>
         
       </div>

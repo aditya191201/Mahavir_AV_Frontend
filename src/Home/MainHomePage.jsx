@@ -27,6 +27,8 @@ function Home1() {
   const [homeCover1, setHomeCover1] = useState([])
   const [isHomeCoverFetched1, setIsHomeFetched1] = useState(false)
   useEffect(() => {
+    document.title = 'Mahavir AV Solutions'
+    window.scrollTo(0, 0)
     axios.get(url + "/refresh-token", {
       headers: {
         "Authorization": "Bearer " + getCookie("token"),
@@ -91,7 +93,7 @@ function Home1() {
       {/* 
       <ContentSZ title = {homeCover1[0].title} description = {homeCover1[0].description}/> */}
       {/* <ContentSZ description={homeCover1} */}
-      <div style={{ backgroundImage: `url("https://images.pexels.com/photos/8761523/pexels-photo-8761523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`, marginTop: 50 }}>
+      <div style={{ backgroundImage: `url("https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/home_solution.jpg")`, marginTop: 50 }}>
         <h1 className="soln-content">Solutions</h1>
         <SolCard />
       </div>
@@ -100,12 +102,12 @@ function Home1() {
           <ContentSZ title={homeCover1[1].title} description={homeCover1[1].description} />
         ) : (null)
       }
-      <div style={{ marginTop: 50 }}>
+      <div style={{ marginTop: "0px" }}>
         <h1 className='head-content'>Our Growth</h1>
         <Counter />
       </div>
 
-      <div className='product-home' style={{ backgroundImage: `url("https://images.pexels.com/photos/8761523/pexels-photo-8761523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")`, opacity: 0.9 }}>
+      <div className='product-home' style={{ backgroundImage: `url("https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/home_solution.jpg")`, opacity: 0.9 }}>
         <h1 className="soln-content">Products</h1>
         <ProductCard />
       </div>
@@ -115,7 +117,7 @@ function Home1() {
         ) : (null)
       }
       <div>
-        <h1 className="soln-content" style={{ marginBottom: 50, color: "black" }}>Awards & Achievements</h1>
+        <h1 className="soln-content" style={{ marginBottom: 15, color: "black" }}>Awards & Achievements</h1>
         <div className='photos'>
           {/* <div>
                     <img src='https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'/>
