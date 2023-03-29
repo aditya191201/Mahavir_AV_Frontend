@@ -25,7 +25,6 @@ var img2 = ""
 var img3 = ""
 var video = ""
 var category = ""
-var images = ""
 var broucher = ""
 
 function AddProduct() {
@@ -91,10 +90,7 @@ function AddProduct() {
       category = event.target.value
       console.log(category)
    }
-   const handleImages = (event) => {
-      images = event.target.value
-      console.log(images)
-   }
+   
    const handleBroucher = (event) => {
       broucher = event.target.value
       console.log(broucher)
@@ -119,7 +115,6 @@ function AddProduct() {
          "productImage3": img3,
          "videoLink": video,
          "productCategory": category,
-         "imgSrc": images,
          "brochureLink": broucher
       }
       axios.post(url + "/add-product",
@@ -133,7 +128,7 @@ function AddProduct() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("product added")
-            localStorage.setItem("localproduct",modelNumber)
+            localStorage.setItem("localproduct", modelNumber)
             toast('Product Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
@@ -205,31 +200,26 @@ function AddProduct() {
                                  <input type="text" onChange={handleVideo} class="input" />
                               </div>
                            </div>
-
-                           <div class="inputfield">
-                              <label>Category</label>
-                              {/* <input type="text" onChange={handleCategory} class="input" /> */}
-                              <select name="category" id="category" onChange={handleCategory} style={{ marginRight: "140px" }}>
-                                 <option>Select Category</option>
-                                 {productCat.map(cat => (
-                                    <option value={cat.title}>{cat.title}</option>
-                                 ))}
-                              </select>
-                              <FontAwesomeIcon icon={faPlus} onClick={() => navigate("/add-product-category")} />
-                           </div>
                            <div style={{ display: "flex" }}>
                               <div class="inputfield">
-                                 <label>Images</label>
-                                 <input type="text" onChange={handleImages} class="input" />
+                                 <label>Category</label>
+                                 {/* <input type="text" onChange={handleCategory} class="input" /> */}
+                                 <select name="category" id="category" onChange={handleCategory} style={{ marginRight: "50px" }}>
+                                    <option>Select Category</option>
+                                    {productCat.map(cat => (
+                                       <option value={cat.title}>{cat.title}</option>
+                                    ))}
+                                 </select>
+                                 <FontAwesomeIcon icon={faPlus} onClick={() => navigate("/add-product-category")} />
                               </div>
-                              <div class="inputfield" style={{ marginLeft: "150px" }}>
+                              <div class="inputfield" style={{ marginLeft: "140px" }}>
                                  <label>Broucher</label>
                                  <input type="text" onChange={handleBroucher} class="input" />
                               </div>
                            </div>
 
 
-                           <div class="inputfield">
+                           <div class="inputfield" style={{marginTop:"20px"}}>
                               <input type="submit" value="Register" onClick={handleClick} class="btn" />
                            </div>
                            <div>
@@ -245,7 +235,7 @@ function AddProduct() {
                               <div class="inputfield">
                                  <input type="submit" value="Add Specifications" onClick={handleClick3} class="btn" />
                               </div>
-                              {(clicked3) ? (<AddSpecs1/>) : (null)}
+                              {(clicked3) ? (<AddSpecs1 />) : (null)}
                            </div>
 
 

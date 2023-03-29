@@ -83,7 +83,7 @@ function UpdateProduct() {
             img1 = products1.productImage1
             img2 = products1.productImage2
             img3 = products1.productImage3
-            video = products1.videoLink
+            video = products1.productVideoLink
             category = products1.productCategory
             broucher = products1.brochureLink
         }
@@ -249,7 +249,7 @@ function UpdateProduct() {
                                                 </div>
                                                 <div class="inputfield" style={{ marginLeft: "150px" }}>
                                                     <label>Video Link</label>
-                                                    <input defaultValue={products1.videoLink} type="text" onChange={handleVideo} class="input" />
+                                                    <input defaultValue={products1.productVideoLink} type="text" onChange={handleVideo} class="input" />
                                                 </div>
                                             </div>
 
@@ -262,7 +262,7 @@ function UpdateProduct() {
                                             </div>
 
 
-                                            <div class="inputfield">
+                                            <div class="inputfield" style={{marginTop:"20px"}}>
                                                 <input type="submit" value="Register" onClick={handleClick} class="btn" />
                                             </div>
                                             <div>
