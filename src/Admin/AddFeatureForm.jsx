@@ -24,10 +24,10 @@ function AddFeatureForm() {
    // axios.defaults.headers.common['Accept'] = 'multipart/form-data'
    // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
    console.log("token", token)
-   const handleName = (event) => {
-      name = event.target.value
-      console.log(name)
-   }
+   // const handleName = (event) => {
+   //    name = event.target.value
+   //    console.log(name)
+   // }
    const handleTitle = (event) => {
       title = event.target.value
       console.log(title)
@@ -48,7 +48,7 @@ function AddFeatureForm() {
          "icon": coverimg,
 
       }
-      axios.post(url + "/solutionfeatures/" + name,
+      axios.post(url + "/solutionfeatures/" + localStorage.getItem("localsol"),
          formBody, {
          headers: {
             "Content-Type": "multipart/form-data",
@@ -82,10 +82,10 @@ function AddFeatureForm() {
          {
             (isLogin == "true") ? (<>
                         <div style={{ display: "flex" }}>
-                           <div class="inputfield">
-                              {/* <label>Solution Name</label> */}
+                           {/* <div class="inputfield">
+                              <label>Solution Name</label>
                               <input type="text" onChange={handleName} class="input" placeholder="Solution Name"/>
-                           </div>
+                           </div> */}
                            <div class="inputfield">
                               {/* <label>Feature Name</label> */}
                               <input type="text" onChange={handleTitle} class="input" placeholder='Feature Name' style={{marginLeft:"20px"}}/>

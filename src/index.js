@@ -54,6 +54,12 @@ import ProductsUsed from './Solution/Products_Used';
 import OurTeam from './OurDevelopers/OurTeam';
 import UpdateSolution from './Admin/UpdateSolution';
 import AddSpecification1 from './Admin/AddSpecification1';
+import UpdateProduct from './Admin/UpdateProduct';
+import DeleteProductHighlights from './Admin/DeleteProductHighlights';
+import DeleteProductFeatures from './Admin/DeleteProductFeatures';
+import DeleteProductSpecs from './Admin/DeleteProductSpecs';
+import DeleteSolutionBenefit from './Admin/DeleteSolutionBenefit';
+import DeleteSolutionFeature from './Admin/DeleteSolutionFeature';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
@@ -96,9 +102,14 @@ root.render(
     <Route path = '/delete-products' element = {<DeleteProducts/>}/>
     <Route path = '/delete-product-id' element = {<DeleteProductById/>}/>
     <Route path = '/delete-product-category' element = {<DeleteProductCategory/>}/>
+    <Route path = '/delete-product-highlight' element = {<DeleteProductHighlights/>}/>
+    <Route path = '/delete-product-feature' element = {<DeleteProductFeatures/>}/>
+    <Route path = '/delete-product-specification' element = {<DeleteProductSpecs/>}/>
     <Route path = '/delete-product-category-id' element = {<DeleteProductCatById/>}/>
     <Route path = '/delete-solution-category-id' element = {<DeleteSolCatById/>}/>
     <Route path = '/delete-solution-id' element = {<DeleteSolutionById/>}/>
+    <Route path = '/delete-solution-benefit' element = {<DeleteSolutionBenefit/>}/>
+    <Route path = '/delete-solution-feature' element = {<DeleteSolutionFeature/>}/>
     <Route path = '/delete-solutions' element = {<DeleteSolutions/>}/>
     <Route path = '/delete-solution-category' element = {<DeleteSolutionCategory/>}/>
     <Route path = '/delete-home-achievement' element = {<DeleteHomeAchievement/>}/>
@@ -113,6 +124,7 @@ root.render(
     <Route path = '/popup' element = {<PopUp/>}/>
     <Route path = '/developers' element = {<OurTeam/>}/>
     <Route path = '/update-solution' element = {<UpdateSolution/>}/>
+    <Route path = '/update-product' element = {<UpdateProduct/>}/>
   </Routes>
   </HashRouter>
   </>

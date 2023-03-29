@@ -23,10 +23,10 @@ function AddBenefitForm() {
     // axios.defaults.headers.common['Accept'] = 'multipart/form-data'
     // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
     console.log("token", token)
-    const handleName = (event) => {
-        name = event.target.value
-        console.log(name)
-    }
+    // const handleName = (event) => {
+    //     name = event.target.value
+    //     console.log(name)
+    // }
     const handleTitle = (event) => {
         title = event.target.value
         console.log(title)
@@ -47,7 +47,7 @@ function AddBenefitForm() {
             "icon": coverimg,
 
         }
-        axios.post(url + "/solutionbenefits/" + name,
+        axios.post(url + "/solutionbenefits/" + localStorage.getItem("localsol"),
             formBody, {
             headers: {
                 "Content-Type": "multipart/form-data",
@@ -82,10 +82,10 @@ function AddBenefitForm() {
                 (isLogin == "true") ? (
                     <>
                         <div style={{ display: "flex" }}>
-                            <div class="inputfield">
-                                {/* <label>Solution Name</label> */}
+                            {/* <div class="inputfield">
+                                <label>Solution Name</label>
                                 <input type="text" onChange={handleName} class="input" placeholder='Solution Name' />
-                            </div>
+                            </div> */}
                             <div class="inputfield">
                                 {/* <label>Benefit Name</label> */}
                                 <input type="text" onChange={handleTitle} class="input" placeholder='Benefit Name' style={{ marginLeft: "20px" }} />

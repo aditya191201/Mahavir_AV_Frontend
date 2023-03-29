@@ -113,6 +113,7 @@ function AddSolution() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("solution added")
+            localStorage.setItem("localsol", title)
             toast('Solution Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,

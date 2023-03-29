@@ -50,7 +50,7 @@ function OurTeam() {
                                 <img src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/aditya_5.JPG" alt="" />
                             </div>
                             <h3>Aditya Deshpande</h3>
-                            <p>Team Lead and Frontend Developer</p>
+                            <p>Frontend Developer</p>
                             <div className="team-icons">
                                 <a href="#" target="_blank">
                                     <FontAwesomeIcon icon={faTwitter} />
