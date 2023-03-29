@@ -96,7 +96,7 @@ function ProductPage() {
           <div className="columns image1">
             <img src={products1.productImage1} alt="" />
           </div>
-          {(isProductFetched) ? (
+          {(products1.additionalFeatures != null) ? (
             <div className="producthigh">
               <h1>Product Highlights</h1>
               {

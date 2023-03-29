@@ -13,6 +13,9 @@ import { useNavigate } from 'react-router-dom';
 import AddProductFeatureForm from './AddProductFeatureForm';
 import AddProductHighlightsForm from './AddProductHighlightsForm';
 import AddSpecs from './AddSpecs';
+import AddProductFeatureForm1 from './AddProductFeatureForm1';
+import AddProductHighlightsForm1 from './AddProductHighlightsForm1';
+import AddSpecs1 from './AddSpecs1';
 var modelNumber = ""
 var name = ""
 var highlights = ""
@@ -130,6 +133,7 @@ function AddProduct() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("product added")
+            localStorage.setItem("localproduct",modelNumber)
             toast('Product Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
@@ -232,16 +236,16 @@ function AddProduct() {
                               <div class="inputfield">
                                  <input type="submit" value="Add Feature" onClick={handleClick1} class="btn" />
                               </div>
-                              {(clicked) ? (<AddProductFeatureForm />
+                              {(clicked) ? (<AddProductFeatureForm1 />
                               ) : (null)}
                               <div class="inputfield">
                                  <input type="submit" value="Add Highlight" onClick={handleClick2} class="btn" />
                               </div>
-                              {(clicked1) ? (<AddProductHighlightsForm />) : (null)}
+                              {(clicked1) ? (<AddProductHighlightsForm1 />) : (null)}
                               <div class="inputfield">
                                  <input type="submit" value="Add Specifications" onClick={handleClick3} class="btn" />
                               </div>
-                              {(clicked3) ? (<AddSpecs/>) : (null)}
+                              {(clicked3) ? (<AddSpecs1/>) : (null)}
                            </div>
 
 

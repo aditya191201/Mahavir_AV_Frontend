@@ -8,17 +8,18 @@ import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import AddProductHighlightsForm from './AddProductHighlightsForm';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 var title = ""
 var description = ""
+var coverimg = ""
 var name = ""
-function AddProductHighlights() {
-   const [clicked1, setIsClicked1] = useState(false)
-   const navigate = useNavigate();
+function AddFeatureForm1() {
+
    var isLogin = localStorage.getItem("login")
+   const navigate = useNavigate();
    var token = getCookie("token")
+   const[clicked, isClicked] = useState(false)
    // axios.defaults.headers.common['Authorization'] = "Bearer "+ token;
    // axios.defaults.headers.common['Accept'] = 'multipart/form-data'
    // axios.defaults.headers.post['Content-Type'] = 'multipart/form-data'
@@ -35,14 +36,19 @@ function AddProductHighlights() {
       description = event.target.value
       console.log(description)
    }
- 
+   const handleCoverimg = (event) => {
+      coverimg = event.target.value
+      console.log(coverimg)
+   }
+   
    const handleClick = () => {
       var formBody = {
-         "title": title,
+         "name": title,
          "description": description,
+         "icon": coverimg,
 
       }
-      axios.post(url + "/additionalfeatures/" + name,
+      axios.post(url + "/solutionfeatures/" + name,
          formBody, {
          headers: {
             "Content-Type": "multipart/form-data",
@@ -53,8 +59,8 @@ function AddProductHighlights() {
       ).then(function (response) {
          if (response.status == 200) {
             console.log("solution added")
-            setIsClicked1(true)
-            toast('Product Highlights Added Successfully', {
+            isClicked(true)
+            toast('Solution Feature Added Successfully', {
                position: "bottom-right",
                autoClose: 5000,
                hideProgressBar: false,
@@ -68,40 +74,44 @@ function AddProductHighlights() {
       }).catch(function (error) {
          console.log("error", error)
       })
-
+      
    }
 
    return (
       <>
          {
             (isLogin == "true") ? (<>
-               <AdminNavbar />
-               <div className="form-contain">
-                  <div class="wrapper-form" style={{maxWidth:"700px"}}>
-                     <div class="title-form">
-                        Add/Update Product Highlights
-                        <br /><br />
-                     </div>
-                     <div class="form-1">
-                        <div style={{display:"flex"}}>
+                        <div style={{ display: "flex" }}>
                            <div class="inputfield">
-                              {/* <label>Product Number</label> */}
-                              <input type="text" onChange={handleName} class="input" placeholder='Product Number' />
+                              {/* <label>Solution Name</label> */}
+                              <input type="text" onChange={handleName} class="input" placeholder="Solution Name"/>
                            </div>
                            <div class="inputfield">
-                              {/* <label>Highlight Name</label> */}
-                              <input type="text" onChange={handleTitle} class="input" style={{marginLeft:"20px"}} placeholder = 'Highlight Name'/>
+                              {/* <label>Feature Name</label> */}
+                              <input type="text" onChange={handleTitle} class="input" placeholder='Feature Name' style={{marginLeft:"20px"}}/>
                            </div>
                            <div class="inputfield">
-                              {/* <label>Feature Description</label> */}
+                              {/* <label>Description</label> */}
                               <input type = "text" class="input" onChange={handleDescription} placeholder= "Description" style={{marginLeft:"20px"}}></input>
+                           </div>
+                           <div class="inputfield">
+                              {/* <label>Icon</label> */}
+                              <input type="text" onChange={handleCoverimg} class="input" placeholder='Icon URL' style={{marginLeft:"20px"}}/>
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
                         </div>
-                        {(clicked1)?(<AddProductHighlightsForm/>):(null)}
-                     </div>
-                  </div>
-               </div>
+                        {(clicked) ? (<AddFeatureForm1/>) : (null)}
+
+                        {/* <div class="inputfield">
+                           <input type="submit" value="Register" onClick={handleClick} class="btn" />
+                        </div>
+                        <div class="inputfield">
+                           <input type="submit" value="Add more Features" onClick={handleClick1} class="btn" />
+                        </div> */}
+
+        
+                
+               
                <ToastContainer
                   position="bottom-right"
                   autoClose={5000}
@@ -114,7 +124,7 @@ function AddProductHighlights() {
                   pauseOnHover
                   theme="dark"
                />
-   
+               
             </>) : (<><h1>Error: Not Logged IN</h1></>)
          }
 
@@ -122,4 +132,4 @@ function AddProductHighlights() {
    )
 }
 
-export default AddProductHighlights;
+export default AddFeatureForm1;

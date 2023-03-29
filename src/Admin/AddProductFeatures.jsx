@@ -85,7 +85,7 @@ function AddProductFeatures() {
                <div className="form-contain">
                   <div class="wrapper-form" style={{maxWidth:"900px"}}>
                      <div class="title-form">
-                        Add Product Features
+                        Add/Update Product Features
                         <br /><br />
                      </div>
                      <div class="form-1">

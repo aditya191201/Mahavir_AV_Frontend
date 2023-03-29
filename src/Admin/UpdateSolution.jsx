@@ -80,6 +80,7 @@ function UpdateSolution() {
             productsused = productsused + product1.modelNum + ";"
         ))
         title = solution.title
+        console.log("inside gelsol", title)
         description = solution.description
         coverimg = solution.coverimg
         category = solution.solcategory

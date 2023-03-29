@@ -11,6 +11,7 @@ import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import AddFeatureForm from './AddFeatureForm';
+import AddFeatureForm1 from './AddFeatureForm1';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -85,7 +86,7 @@ function AddFeatures() {
                <div className="form-contain">
                   <div class="wrapper-form" style={{maxWidth:"900px"}}>
                      <div class="title-form">
-                        Add Solution Features
+                        Add/Update Solution Features
                         <br /><br />
                      </div>
 
@@ -109,7 +110,7 @@ function AddFeatures() {
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
                         </div>
-                        {(clicked) ? (<AddFeatureForm/>) : (null)}
+                        {(clicked) ? (<AddFeatureForm1/>) : (null)}
 
                         {/* <div class="inputfield">
                            <input type="submit" value="Register" onClick={handleClick} class="btn" />

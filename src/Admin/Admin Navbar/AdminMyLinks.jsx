@@ -1,11 +1,21 @@
 export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublinks:[
-    {Head: "Home Submenu",
+    {Head: "Add Home Submenu",
     sublink:[
+        {name:'Add Admin',link:'/add-admin'},
         {name:'Add Home Video', link:'/add-home-video'},
         {name:'Add Home Description', link:'/add-home-description'},
         {name:'Add Home Achievements',link:'/add-achievements'},
         {name:'Add Home Counter', link:'/add-counter'},
         {name:'Add Navbar',link:'/add-navbar'}
+    ]},
+    {Head: "Delete Home Submenu",
+    sublink:[
+        { name:'Delete Home Cover', link: '/delete-home-cover'},
+        { name:'Delete Home Achievement', link: '/delete-home-achievement'},
+        { name:'Delete Home Description', link: '/delete-home-description'},
+        { name:'Delete Counter By Name', link:'/delete-counters-id'},
+        { name:'Delete All Counters', link:'/delete-counters'},
+        { name:'Delete Navbar', link: '/delete-navbar'}
     ]}
 ]}, 
 {name: 'Add Excel', mainlink:"", submenu:true, sublinks:[
@@ -17,57 +27,64 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
         {name:'Add Solution Category Excel', link:'/add-solution-category-excel'}
     ]}
 ]}, 
-    {name: 'Add Product', mainlink:"/add-product", submenu:true, sublinks:[
+    {name: 'Products', mainlink:"", submenu:true, sublinks:[
     {
-        Head: "Product Submenu",
+        Head: "Add Product Submenu",
         sublink:[
-            {name:'Add Product Feature', link: '/add-product-feature'},
-            {name:'Add Product Highlights', link: '/add-product-highlights'},
-            {name:'Add Product Category',link:'/add-product-category'},
-            {name:'Add Product Specifications',link:'/add-specifications'}
+            {name:'Add Product', link: '/add-product'},
+            {name:'Add/Update Product Feature', link: '/add-product-feature'},
+            {name:'Add/Update Product Highlights', link: '/add-product-highlights'},
+            {name:'Add/Update Product Specifications',link:'/add-specifications'},
+            {name:'Add Product Category',link:'/add-product-category'}
+        ]
+    },
+    {
+        Head: "Delete Product Submenu",
+        sublink:[
+            { name:'Delete All Products', link: '/delete-products'},
+            { name:'Delete All Product Category', link: '/delete-product-category'},
+            { name:'Delete Products By Id', link: '/delete-product-id'},
+            { name:'Delete Product Category By Id', link: '/delete-product-category-id'},
+            { name:'Delete Product Highlight', link: '/delete-product-highlight'},
+            { name:'Delete Product Feature', link: '/delete-product-feature'},
+            { name:'Delete Product Specification', link: '/delete-product-specification'}
+        ]
+    },
+    {
+        Head: "Update Product Submenu",
+        sublink:[
+            { name:'Update Product', link:'/update-product'}
         ]
     }
     ]
     },
-    {name: 'Add Solution',mainlink:"/add-solution", submenu:true, sublinks:[
+    {name: 'Solutions',mainlink:"", submenu:true, sublinks:[
         {
-            Head: "Solution Submenu",
+            Head: "Add Solution Submenu",
             sublink:[
-                { name:'Add Solution Feature', link : '/add-solution-features'},
-                { name:'Add Solution Benefits', link: '/add-solution-benefits'},
+                { name:'Add Solution', link: '/add-solution'},
+                { name:'Add/Update Solution Feature', link : '/add-solution-features'},
+                { name:'Add/Update Solution Benefits', link: '/add-solution-benefits'},
                 { name:'Add Solution Category', link: '/add-solution-category'}
             ]
         },
-       
-    ]},
-    {name: 'Delete All',mainlink:"/delete-products", submenu:true, sublinks:[
         {
-            Head: "Delete Submenu",
+            Head: "Delete Solution Submenu",
             sublink:[
-                { name:'Delete Solutions', link : '/delete-solutions'},
-                { name:'Delete Solution Category', link: '/delete-solution-category'},
-                { name:'Delete Products', link: '/delete-products'},
-                { name:'Delete Product Category', link: '/delete-product-category'},
-                { name:'Delete All Counters', link:'/delete-counters'},
-                { name:'Delete Navbar', link: '/delete-navbar'}
-            ]
-        },
-       
-    ]},
-    {name: 'Delete One',mainlink:"/delete-products", submenu:true, sublinks:[
-        {
-            Head: "Delete Submenu",
-            sublink:[
+                { name:'Delete All Solutions', link : '/delete-solutions'},
+                { name:'Delete All Solution Category', link: '/delete-solution-category'},
                 { name:'Delete Solution By Id', link : '/delete-solution-id'},
                 { name:'Delete Solution Category By Id', link: '/delete-solution-category-id'},
-                { name:'Delete Products By Id', link: '/delete-product-id'},
-                { name:'Delete Product Category By Id', link: '/delete-product-category-id'},
-                { name:'Delete Home Cover', link: '/delete-home-cover'},
-                { name:'Delete Home Achievement', link: '/delete-home-achievement'},
-                { name:'Delete Home Description', link: '/delete-home-description'},
-                { name:'Delete Counter By Name', link:'/delete-counters-id'}
+                { name:'Delete Solution Feature', link: '/delete-solution-feature'},
+                { name:'Delete Solution Benefit', link: '/delete-solution-benefit'},
             ]
         },
+        {
+            Head: "Update Solution",
+            sublink:[
+                { name: 'Update Solution', link: '/update-solution'},
+            ]
+        }
        
     ]}
 

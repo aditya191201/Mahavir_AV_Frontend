@@ -10,6 +10,7 @@ import { useState } from 'react';
 import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import AddFeatureForm1 from './AddFeatureForm1';
 var title = ""
 var description = ""
 var coverimg = ""

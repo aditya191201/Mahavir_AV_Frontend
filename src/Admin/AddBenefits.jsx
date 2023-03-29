@@ -11,6 +11,7 @@ import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import AddBenefitForm from './AddBenefitForm';
+import AddBenefitForm1 from './AddBenefitForm1';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -85,7 +86,7 @@ function AddBenefits() {
                   <div className="form-contain">
                      <div class="wrapper-form" style={{maxWidth:"900px"}}>
                         <div class="title-form">
-                           Add Solution Benefits
+                           Add/Update Solution Benefits
                            <br /><br />
                         </div>
                         <div class="form-1">
@@ -108,7 +109,7 @@ function AddBenefits() {
                               </div>
                               <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
                            </div>
-                           {(clicked1) ? (<AddBenefitForm />) : (null)}
+                           {(clicked1) ? (<AddBenefitForm1 />) : (null)}
 
                            {/* <div class="inputfield">
                               <input type="submit" value="Register" onClick={handleClick} class="btn" />

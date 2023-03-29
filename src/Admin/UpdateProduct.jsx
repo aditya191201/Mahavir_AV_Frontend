@@ -22,7 +22,6 @@ var img2 = ""
 var img3 = ""
 var video = ""
 var category = ""
-var images = ""
 var broucher = ""
 
 function UpdateProduct() {
@@ -62,21 +61,32 @@ function UpdateProduct() {
                     setIsProductFetched(true)
                     console.log(response.data)
                     console.log("products", products1)
+                    name = response.data.productName
+                    highlights = response.data.productHighlights
+                    price = response.data.productPrice
+                    img1 = response.data.productImage1
+                    img2 = response.data.productImage2
+                    img3 = response.data.productImage3
+                    video = response.data.videoLink
+                    category = response.data.productCategory
+                    broucher = response.data.brochureLink
                 }
             }).catch(function (error) {
                 console.log("error", error)
             })
         }
-        name = products1.productName
-        highlights = products1.productHighlights
-        price = products1.productPrice
-        img1 = products1.productImage1
-        img2 = products1.productImage2
-        img3 = products1.productImage3
-        video = products1.videoLink
-        category = products1.productCategory
-        images = products1.productImage1
-        broucher = products1.brochureLink
+
+        if (isProductFetched) {
+            name = products1.productName
+            highlights = products1.productHighlights
+            price = products1.productPrice
+            img1 = products1.productImage1
+            img2 = products1.productImage2
+            img3 = products1.productImage3
+            video = products1.videoLink
+            category = products1.productCategory
+            broucher = products1.brochureLink
+        }
         setClick(true)
     }
     const navigate = useNavigate()
@@ -116,10 +126,7 @@ function UpdateProduct() {
         category = event.target.value
         console.log(category)
     }
-    const handleImages = (event) => {
-        images = event.target.value
-        console.log(images)
-    }
+  
     const handleBroucher = (event) => {
         broucher = event.target.value
         console.log(broucher)
@@ -134,6 +141,7 @@ function UpdateProduct() {
         setIsClicked3(true)
     }
     const handleClick = () => {
+        console.log("inside submit", name)
         var formBody = {
             "modelNumber": modelNumber,
             "productName": name,
@@ -144,7 +152,6 @@ function UpdateProduct() {
             "productImage3": img3,
             "videoLink": video,
             "productCategory": category,
-            "imgSrc": images,
             "brochureLink": broucher
         }
         axios.post(url + "/add-product",
@@ -246,12 +253,8 @@ function UpdateProduct() {
                                                 </div>
                                             </div>
 
-                                            
+
                                             <div style={{ display: "flex" }}>
-                                                <div class="inputfield">
-                                                    <label>Images</label>
-                                                    <input defaultValue={products1.imgSrc} type="text" onChange={handleImages} class="input" />
-                                                </div>
                                                 <div class="inputfield" style={{ marginLeft: "150px" }}>
                                                     <label>Broucher</label>
                                                     <input defaultValue={products1.brochureLink} type="text" onChange={handleBroucher} class="input" />
