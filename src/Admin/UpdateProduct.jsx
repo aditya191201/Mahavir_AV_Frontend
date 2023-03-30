@@ -67,7 +67,7 @@ function UpdateProduct() {
                     img1 = response.data.productImage1
                     img2 = response.data.productImage2
                     img3 = response.data.productImage3
-                    video = response.data.videoLink
+                    video = response.data.productVideoLink
                     category = response.data.productCategory
                     broucher = response.data.brochureLink
                 }
