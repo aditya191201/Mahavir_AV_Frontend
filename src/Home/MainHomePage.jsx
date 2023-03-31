@@ -22,6 +22,7 @@ import Footer from '../FooterPage/Footer';
 import ProductCard from './ProductCard';
 function Home1() {
   const navigate = useNavigate()
+  const [size, setSize] = useState(0)
   const [homeCover, setHomeCover] = useState([])
   const [isHomeCoverFetched, setIsHomeFetched] = useState(false)
   const [homeCover1, setHomeCover1] = useState([])
@@ -29,22 +30,6 @@ function Home1() {
   useEffect(() => {
     document.title = 'Mahavir AV Solutions'
     window.scrollTo(0, 0)
-    axios.get(url + "/refresh-token", {
-      headers: {
-        "Authorization": "Bearer " + getCookie("token"),
-        "isRefreshToken": "true"
-      }
-    }).then(function (response) {
-      if (response.status == 200) {
-        // console.log("In refresh token")
-        setCookie("token", response.data.token, 20);
-        // setIsCategoryDisplayFetched(true);
-        // console.log("Token",response.data.token);
-      }
-
-    }).catch(function (error) {
-      console.log("error");
-    })
     if (!isHomeCoverFetched) {
       axios.get(url + "/getAchievements").then(function (response) {
         if (response.status == 200) {
@@ -64,6 +49,8 @@ function Home1() {
           setHomeCover1(response.data)
           setIsHomeFetched1(true)
           console.log(response.data)
+          console.log(response.data.length)
+          console.log("size",size)
           console.log("home description", homeCover1)
 
         }
@@ -78,15 +65,18 @@ function Home1() {
       <Navbar />
       <Main />
       <Videotxt />
-      <Animate2 />
+      {
+        homeCover1[0] ? ( <Animate2 title={homeCover1[0].title} description={homeCover1[0].description}/>) : (null)
+      }
+     
       {/* {homeCover1.map(cover=>(
       <div>
         {cover.title} : {cover.description}
       </div>
     ))} */}
       {
-        homeCover1[0] ? (
-          <ContentSZ title={homeCover1[0].title} description={homeCover1[0].description} />
+        homeCover1[1] ? (
+          <ContentSZ title={homeCover1[1].title} description={homeCover1[1].description} />
         ) : (null)
       }
 
@@ -98,8 +88,8 @@ function Home1() {
         <SolCard />
       </div>
       {
-        (homeCover1[1]) ? (
-          <ContentSZ title={homeCover1[1].title} description={homeCover1[1].description} />
+        (homeCover1[2]) ? (
+          <ContentSZ title={homeCover1[2].title} description={homeCover1[2].description} />
         ) : (null)
       }
       <div style={{ marginTop: "0px" }}>
@@ -112,8 +102,8 @@ function Home1() {
         <ProductCard />
       </div>
       {
-        (homeCover1[2]) ? (
-          <ContentSZ title={homeCover1[2].title} description={homeCover1[2].description} />
+        (homeCover1[3]) ? (
+          <ContentSZ title={homeCover1[3].title} description={homeCover1[3].description} />
         ) : (null)
       }
       <div>

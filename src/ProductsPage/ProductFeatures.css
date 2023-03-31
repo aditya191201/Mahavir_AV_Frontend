@@ -32,6 +32,9 @@
 .margin{
     margin-top: 50px;
 }
+.feature-des-holder{
+    width: 70%;
+}
 @media (max-width: 500px){
     .features-container{
         margin-left: 0;
@@ -42,6 +45,9 @@
     .feature-desc{
         margin-top: 10px;
         font-size: 10px;
+    }
+    .feature-des-holder{
+        width: 100%;
     }
 }
 @media (max-width: 768px){

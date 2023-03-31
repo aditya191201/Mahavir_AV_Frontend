@@ -75,7 +75,7 @@ function ProductFeature () {
                     ) : (
                         <>
                        
-                       <div style={{marginTop:25}}>
+                       <div style={{marginTop:25}} className= "feature-des-holder">
                         <div className="feature-title">
                             <h1>{description.title}</h1>
                         </div>

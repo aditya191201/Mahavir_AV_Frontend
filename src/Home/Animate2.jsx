@@ -4,15 +4,13 @@ import './Animate2.css';
 import './Animations.css';
 import './MycssSZ.css';
 import './headcontent.css';
-const Animate2 = () => {
+function Animate2({title, description}){
     return (
         <>
             <div className="animation-container">
                 {/* <h1 className="head-content">Our Qualities</h1> */}
-                <div >
-                    <Animate1 />
-                </div>
-                <div className="space-anime">
+                
+                {/* <div className="space-anime">
 
                 </div>
                 <div>
@@ -32,16 +30,19 @@ const Animate2 = () => {
                             <video src="https://raw.githubusercontent.com/aditya191201/MAVS_SRC/master/assets/tickmark.mp4" autoPlay loop muted />
                         </div>
                     </div>
-                </div>
-                {/* <div className="animedes1">
-                    <div>
-                        <h2>IN THE COMING YEARS</h2>
-                    </div>
-                    <br />
-                    <div>
-                        <p>IN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARSIN THE COMING YEARS</p>
-                    </div>
                 </div> */}
+                <div style={{display:"block", marginTop:"80px"}}>
+                    <div className="home-head1">
+                        <h2>{title}</h2>
+                    </div>
+                    <br /> <br />
+                    <div className="home-p1">
+                        <p>{description}</p>
+                    </div>
+                </div>
+                <div >
+                    <Animate1 />
+                </div>
             </div>
         </>
     )

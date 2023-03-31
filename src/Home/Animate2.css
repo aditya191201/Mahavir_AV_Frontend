@@ -28,7 +28,7 @@
 @media screen and (width<800px) {
     .animation-container{
         flex-wrap: wrap;
-        margin-top: 400px !important;
+        margin-top: 290px !important;
     }
     .space-anime{
         width: 0px !important;

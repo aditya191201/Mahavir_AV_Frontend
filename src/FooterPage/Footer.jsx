@@ -3,9 +3,11 @@ import './Animations.css';
 import './headcontent.css';
 import { GoLocation } from 'react-icons/go';
 import { GoMail } from 'react-icons/go';
-import { BiPhone } from 'react-icons/bi';
+import { BiPhone, BiRupee } from 'react-icons/bi';
 import { ImClock } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
+import { faIndianRupeeSign, faRupee, faRupeeSign } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 function Footer(){
   const navigate = useNavigate()
   
@@ -46,8 +48,8 @@ function Footer(){
 
         <br></br>
         <div className='icon-with-text'>
-          <GoLocation color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;Mahavir AV Solutions,Bibwewadi,Pune</p>
+          <GoLocation color='white' size={'1.5rem'} style={{marginTop:"20px"}}/>
+          <p>&nbsp;&nbsp;Mahavir Electronics and Furniture <br />&nbsp;&nbsp;Plot-10, Parshwanath Nagar<br />&nbsp;&nbsp;Bibwewadi Pune 411037 </p>
 
         </div>
         <br></br>
@@ -64,9 +66,9 @@ function Footer(){
         </div>
         <br></br>
         <div className='icon-with-text'>
-          <ImClock color='white' size={'1.5rem'} />
-          <p>&nbsp;&nbsp;Mon - Fri 8:00 AM to 5:00 PM</p>
-
+          <BiRupee color='white' size={'1.5rem'} />
+          <p>&nbsp;&nbsp;GST Number: 27AAUHS5609B1ZV</p>
+      
         </div>
         <br></br>
 

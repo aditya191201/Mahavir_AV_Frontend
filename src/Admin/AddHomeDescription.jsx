@@ -72,7 +72,7 @@ function AddHomeDescription() {
                <div className="form-contain">
                   <div class="wrapper-form">
                      <div class="title-form">
-                        Add Home Page Description
+                        Add/Update Home Page Description
                      </div>
                      <div class="form-1">
 

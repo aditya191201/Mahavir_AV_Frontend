@@ -91,51 +91,50 @@ function ProductPage() {
             </div>
           </div>
         ) : (null)}
-      
+
         <div className="section-container">
-          <div className="columns image1">
-            <img src={products1.productImage1} alt="" />
-          </div>
+
           {(products1.additionalFeatures != null) ? (
-            <div className="producthigh">
-              <h1>Product Highlights</h1>
-              {
-                products1.additionalFeatures.map(feature => (
-                  // <div className="productdesc1">
-                  //   <h2>
-                  //     <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
-                  //   </h2>
-                  // </div>
-                  (feature.title == "") ? (
-                    <div className="productdesc1">
-                    <h2>
-                      <span>{feature.description}</span>
-                    </h2>
-                  </div>
-                  ) : (
-                    <div className="productdesc1">
-                    <h2>
-                      <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
-                    </h2>
-                  </div>
-                  )
-                  
-                ))
-              }
-            </div>
+            <>
+              <div className="columns image1">
+                <img src={products1.productImage1} alt="" />
+              </div>
+              <div className="producthigh">
+                <h1>Product Highlights</h1>
+                {
+                  products1.additionalFeatures.map(feature => (
+                    // <div className="productdesc1">
+                    //   <h2>
+                    //     <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
+                    //   </h2>
+                    // </div>
+                    (feature.title == "") ? (
+                      <div className="productdesc1">
+                        <h2>
+                          <span>{feature.description}</span>
+                        </h2>
+                      </div>
+                    ) : (
+                      <div className="productdesc1">
+                        <h2>
+                          <span style={{ fontWeight: '600' }}>{feature.title}</span> : <span>{feature.description}</span>
+                        </h2>
+                      </div>
+                    )
+
+                  ))
+                }
+              </div>
+            </>
           ) : (null)}
         </div>
-        <br />
-        <br />
-        {/* <div className="youtube-container">
-        <iframe width="560" height="315" src={products1.productVideoLink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         <br />
-         <br />
-        </div> */}
+        
+        
+
         {(products1.productDescriptions != null) ? (
           <ProductFeature />
         ) : (null)}
-        
+
         <div>
           <div className="download-broucher">
             <button onClick={() => { downloadFileAtURL(products1.brochureLink) }} >
@@ -156,7 +155,7 @@ function ProductPage() {
                 </Row>
                 <div className='specsrow'>
                   <Row>
-                      <ProductSpecification product={products1} />
+                    <ProductSpecification product={products1} />
                   </Row>
                 </div>
 
@@ -164,7 +163,14 @@ function ProductPage() {
             </div>
           </>) : (null)
         }
-
+        <br /><br />
+        {(products1.productVideoLink != "") ? (
+          <div className="youtube-container">
+            <iframe src={products1.productVideoLink} className="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br />
+          </div>
+        ) : (null)}
+        <br /><br />
         <div>
           <Footer />
         </div>

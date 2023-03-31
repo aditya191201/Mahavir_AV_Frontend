@@ -3,7 +3,7 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
     sublink:[
         {name:'Add Admin',link:'/add-admin'},
         {name:'Add Home Video', link:'/add-home-video'},
-        {name:'Add Home Description', link:'/add-home-description'},
+        {name:'Add/Update Home Description', link:'/add-home-description'},
         {name:'Add Home Achievements',link:'/add-achievements'},
         {name:'Add Home Counter', link:'/add-counter'},
         {name:'Add Navbar',link:'/add-navbar'}

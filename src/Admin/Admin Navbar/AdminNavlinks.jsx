@@ -43,7 +43,7 @@ const AdminNavlinks = () => {
                         <div className="bg-black p-3.5 grid grid-cols-2">
                             {
                                 link.sublinks.map((mysublinks)=>(
-                                    <div>
+                                    <div style={{ marginRight: 20, marginTop: 10 }}>
                                         <h1 className="text-lg font-semibold text-white" >{mysublinks.Head}</h1>
                                         <hr />
                                         {mysublinks.sublink.map(slink=>(
