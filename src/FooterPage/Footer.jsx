@@ -12,7 +12,8 @@ function Footer(){
   const navigate = useNavigate()
   
   return (
-
+    <>
+    <br />
     <div className='foot'>
 
 
@@ -74,7 +75,7 @@ function Footer(){
 
       </div>
     </div>
-
+    </>
 
   )
 }

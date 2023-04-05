@@ -27,6 +27,22 @@ function Home1() {
   const [isHomeCoverFetched, setIsHomeFetched] = useState(false)
   const [homeCover1, setHomeCover1] = useState([])
   const [isHomeCoverFetched1, setIsHomeFetched1] = useState(false)
+  axios.get(url + "/refresh-token", {
+    headers: {
+       "Authorization": "Bearer " + getCookie("token"),
+       "isRefreshToken": "true"
+    }
+ }).then(function (response) {
+    if (response.status == 200) {
+       // console.log("In refresh token")
+       setCookie("token", response.data.token, 20);
+       // setIsCategoryDisplayFetched(true);
+       // console.log("Token",response.data.token);
+    }
+
+ }).catch(function (error) {
+    console.log("error");
+ })
   useEffect(() => {
     document.title = 'Mahavir AV Solutions'
     window.scrollTo(0, 0)

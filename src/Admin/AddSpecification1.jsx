@@ -89,7 +89,7 @@ function AddSpecification1() {
                <div className="form-contain">
                   <div class="wrapper-form" style={{ maxWidth: "1100px" }}>
                      <div class="title-form">
-                        Add Specifications
+                        Add/Update Specifications
                      </div>
                      <div class="form-1">
 
