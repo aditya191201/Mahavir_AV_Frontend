@@ -114,7 +114,7 @@ const ProductsUsed = () => {
     console.log("In item....")
     var modelnum = item.modelNum
     console.log("inside handle click",item)
-    localStorage.setItem("img",item.productimg)
+    localStorage.setItem("img",item.productImage)
     localStorage.setItem('modelNum',modelnum)
     console.log("model number",modelnum)
     navigate('/product/'+modelnum);
