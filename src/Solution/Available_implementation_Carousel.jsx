@@ -81,20 +81,20 @@ const Carousel = () => {
 
         {
           (solution.solimg1 != "") ? (
-            <div>
-              <img src={solution.solimg1} alt="" style={{ width: "100%", height: "100%" }} />
+            <div className="slider-image">
+              <img src={solution.solimg1} alt="" />
             </div>
           ) : (null)
         }
         {(solution.solimg2 != "") ? (
-          <div>
-            <img src={solution.solimg2} alt="" style={{ width: "100%", height: "100%" }} />
+          <div className="slider-image">
+            <img src={solution.solimg2} alt=""/>
           </div>
         ) : (null)}
         {
           (solution.solimg3 != "") ? (
-          <div>
-            <img src={solution.solimg3} alt="" style={{ width: "100%", height: "100%" }} />
+          <div className="slider-image">
+            <img src={solution.solimg3} alt=""/>
           </div>) : (null)
         }
 

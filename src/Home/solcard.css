@@ -193,3 +193,14 @@ body {
       display: none;
     }
   }
+  @media screen and (width<1050px)
+  {
+      .solution{
+        margin-right: 30px;
+      }
+      .card{
+        margin-left: 20px;
+      }
+      
+      
+  }

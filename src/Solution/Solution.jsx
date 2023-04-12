@@ -9,7 +9,7 @@ import Carousel from './Available_implementation_Carousel';
 import Navbar from '../Navbar/Navbar';
 import { useState } from 'react';
 import './BenefitCard.css';
-import BCard from './benefit-card-comp'
+import BCard from './benefit-card-comp';
 import { useEffect } from 'react';
 import './FeatureCards.css'
 import FCard from "./feature-card-comp";
@@ -41,7 +41,7 @@ function Solution() {
       }
       document.title = solution.title + " - MAVS"
    })
-
+   
    localStorage.setItem("solutionName", solution.title)
 
    return (
@@ -139,7 +139,7 @@ function Solution() {
             </div>
          </>)}
 
-         {/* <Footer/> */}
+         <Footer/>
 
       </>
 

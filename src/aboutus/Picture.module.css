@@ -28,7 +28,7 @@
     padding-top:230px;
     font-family: 'Poppins';
     font-style: normal;
-    font-weight: 650;
+    font-weight: 600;
     letter-spacing: 1px;
     font-size: 45px;
     line-height: 39px;
@@ -44,7 +44,7 @@
 }
 @media screen and (width<560px){
     .header{
-        font-size: 19px !important;
+        font-size: 32px !important;
         margin-top:83px;
         color: black;
     }  

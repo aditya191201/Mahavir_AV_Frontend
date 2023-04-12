@@ -38,7 +38,11 @@
   transform: scale(1.1);
   transition: 500ms;
 }
-
+.slider-image img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
 @media(max-width: 500px)
 {
   .carousel .slick-arrow.slick-prev, .carousel .slick-arrow.slick-next{
@@ -49,3 +53,11 @@
     font-size: 20px !important;
   }
 }
+
+@media screen and (width<770px)
+  {
+    .slider-image img{
+      height: 300px;
+  }
+      
+  }
