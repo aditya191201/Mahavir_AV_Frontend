@@ -35,7 +35,7 @@ function Videotxt() {
           <p className='content-home-main'>
             {homeCover[0].description}
           </p>
-        <div className='readmore'>
+        <div className='readmore' style = {{cursor:"pointer"}}>
           <a onClick={() => handleClick()}>Read More</a>
         </div>
       </div></>) : (null)

@@ -61,3 +61,11 @@
   }
       
   }
+
+  @media screen and (width<px)
+  {
+    .slider-image img{
+      height: 300px;
+  }
+      
+  }

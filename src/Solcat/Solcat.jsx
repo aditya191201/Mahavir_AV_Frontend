@@ -59,7 +59,8 @@ function Solcat() {
 
             {solutioncategory.map(category => (
                 
-                <>{console.log(category.solutions.length)}<br /><br />
+                <>
+                {console.log(category.solutions.length)}<br /><br />
                     {(category.solutions.length == 0)  ?(null) : (
                         <>
                             <div className="categoryh1"><h1>{category.category}</h1></div>
@@ -87,10 +88,7 @@ function Solcat() {
                             </div>
                         </>
                     )}
-
-                    <div>
-
-                    </div>
+                    <br />
                 </>
             ))}
             <Footer />

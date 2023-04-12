@@ -13,7 +13,7 @@ function Footer(){
   
   return (
     <>
-    <br />
+    
     <div className='foot'>
 
 

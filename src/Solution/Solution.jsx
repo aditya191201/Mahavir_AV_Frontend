@@ -113,6 +113,7 @@ function Solution() {
                ) : (null)}
 
             </div>
+            <br />
             <div className="download-broucher">
                <PopUp_Sol />
             </div>
@@ -126,7 +127,7 @@ function Solution() {
 
          <ProductsUsed />
          {(solution.solimg1 == "" && solution.solimg2 == "" && solution.solimg3 == "") ? (null) : (<>
-            <div className='categoryh1'><h1>Available Implementation</h1></div>
+            <div className='categoryh1'><h1>Available Implementations</h1></div>
             {/*         
          <div className='Implementation'>
             <Slider />

@@ -9,7 +9,7 @@ const NavLinks = () => {
     const [heading, setHeading] = useState("");
     const [subHeading, setSubHeading] = useState("");
     const navigate = useNavigate();
-    console.log("links", links)
+    // console.log("links", links)
 
     const [navbar, setNavbar] = useState([])
     const [isNavbarFetched, setIsNavbarFetched] = useState(false)
