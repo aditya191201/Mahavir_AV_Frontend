@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Table, Row } from 'react-bootstrap';
+import React from "react";
+import { Table} from 'react-bootstrap';
 
 function ProductSpecification({ product }) {
     // console.log("productInfo",product.productInformation);
@@ -7,9 +7,6 @@ function ProductSpecification({ product }) {
 
 
 
-    const [key, SetKeys] = useState([]);
-    const [value, SetValues] = useState([]);
-    
    
 
     return (
@@ -55,6 +52,7 @@ function ProductSpecification({ product }) {
                                                         </p>
                                                     </td>
                                                 </tr>
+                                                <br />
                                         </Table>
                                     </>
                                 ))}

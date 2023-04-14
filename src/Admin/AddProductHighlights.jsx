@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import AddProductHighlightsForm from './AddProductHighlightsForm';
 var title = ""
@@ -71,15 +71,41 @@ function AddProductHighlights() {
 
    }
 
+   const handleDelete = () => {
+      axios.delete(url + "/deleteAdditionalFeatures/" + name + "/" + title, {
+         headers: {
+           "Content-Type": "multipart/form-data",
+           "Authorization": "Bearer " + token
+         }
+       }).then(function (response) {
+         if (response.status == 200) {
+           console.log("DELETE", "Product Highlight")
+           setIsClicked1(true)
+           toast('Product Highlight Deleted Successfully', {
+             position: "bottom-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "dark",
+           });
+         }
+       }).catch(function (error) {
+         console.log("Error", error)
+       })
+   }
+
    return (
       <>
          {
             (isLogin == "true") ? (<>
                <AdminNavbar />
                <div className="form-contain">
-                  <div class="wrapper-form" style={{maxWidth:"700px"}}>
+                  <div class="wrapper-form" style={{maxWidth:"800px"}}>
                      <div class="title-form">
-                        Add/Update Product Highlights
+                        Add/Update/Delete Product Highlights
                         <br /><br />
                      </div>
                      <div class="form-1">
@@ -97,6 +123,7 @@ function AddProductHighlights() {
                               <input type = "text" class="input" onChange={handleDescription} placeholder= "Description" style={{marginLeft:"20px"}}></input>
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
+                           <FontAwesomeIcon icon={faTrash} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleDelete}/>
                         </div>
                         {(clicked1)?(<AddProductHighlightsForm/>):(null)}
                      </div>

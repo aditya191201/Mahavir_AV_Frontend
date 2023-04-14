@@ -9,7 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -75,7 +75,31 @@ function AddProductFeatureForm() {
       })
 
    }
-
+   const handleDelete = () =>{
+      axios.delete(url + "/deleteDescription/" + name + "/" + title, {
+         headers: {
+           "Content-Type": "multipart/form-data",
+           "Authorization": "Bearer " + token
+         }
+       }).then(function (response) {
+         if (response.status == 200) {
+           console.log("DELETE", "Product Feature")
+           setIsClicked(true)
+           toast('Product Feature Deleted Successfully', {
+             position: "bottom-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "dark",
+           });
+         }
+       }).catch(function (error) {
+         console.log("Error", error)
+       })
+   }
    return (
       <>
          {
@@ -100,6 +124,7 @@ function AddProductFeatureForm() {
                               <input type="text" onChange={handleCoverimg} class="input" placeholder='Feature Icon' style={{marginLeft:"20px"}}/>
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
+                           <FontAwesomeIcon icon={faTrash} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleDelete}/>
                         </div>
                         {(clicked) ? (<AddProductFeatureForm/>) : (null)}
                <ToastContainer

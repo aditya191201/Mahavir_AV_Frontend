@@ -9,7 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 import AddProductFeatureForm from './AddProductFeatureForm';
 var title = ""
 var description = ""
@@ -77,6 +77,32 @@ function AddProductFeatures() {
 
    }
 
+   const handleDelete = () =>{
+      axios.delete(url + "/deleteDescription/" + name + "/" + title, {
+         headers: {
+           "Content-Type": "multipart/form-data",
+           "Authorization": "Bearer " + token
+         }
+       }).then(function (response) {
+         if (response.status == 200) {
+           console.log("DELETE", "Product Feature")
+           setIsClicked(true)
+           toast('Product Feature Deleted Successfully', {
+             position: "bottom-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "dark",
+           });
+         }
+       }).catch(function (error) {
+         console.log("Error", error)
+       })
+   }
+
    return (
       <>
          {
@@ -85,7 +111,7 @@ function AddProductFeatures() {
                <div className="form-contain">
                   <div class="wrapper-form" style={{maxWidth:"900px"}}>
                      <div class="title-form">
-                        Add/Update Product Features
+                        Add/Update/Delete Product Features
                         <br /><br />
                      </div>
                      <div class="form-1">
@@ -107,6 +133,7 @@ function AddProductFeatures() {
                               <input type="text" onChange={handleCoverimg} class="input" placeholder='Feature Icon' style={{marginLeft:"20px"}}/>
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
+                           <FontAwesomeIcon icon={faTrash} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleDelete}/>
                         </div>
                         {(clicked) ? (<AddProductFeatureForm/>) : (null)}
 

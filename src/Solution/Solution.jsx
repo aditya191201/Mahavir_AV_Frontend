@@ -1,4 +1,3 @@
-import { faHourglass1 } from '@fortawesome/free-solid-svg-icons';
 import React from 'react'
 import './Solution.css'
 import Feature from './FeatureCards';
@@ -9,10 +8,8 @@ import Carousel from './Available_implementation_Carousel';
 import Navbar from '../Navbar/Navbar';
 import { useState } from 'react';
 import './BenefitCard.css';
-import BCard from './benefit-card-comp';
 import { useEffect } from 'react';
 import './FeatureCards.css'
-import FCard from "./feature-card-comp";
 import './benefit-card-comp.css'
 import styles from "../aboutus/Picture.module.css";
 import '../Solcat/solcat.css';

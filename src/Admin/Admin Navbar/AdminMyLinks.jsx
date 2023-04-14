@@ -29,13 +29,14 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
 ]}, 
     {name: 'Products', mainlink:"", submenu:true, sublinks:[
     {
-        Head: "Add Product Submenu",
+        Head: "Add/Update Product Submenu",
         sublink:[
             {name:'Add Product', link: '/add-product'},
-            {name:'Add/Update Product Feature', link: '/add-product-feature'},
-            {name:'Add/Update Product Highlights', link: '/add-product-highlights'},
-            {name:'Add/Update Product Specifications',link:'/add-specifications'},
-            {name:'Add Product Category',link:'/add-product-category'}
+            {name:'Add Product Category',link:'/add-product-category'},
+            {name:'Add/Update/Delete Product Feature', link: '/add-product-feature'},
+            {name:'Add/Update/Delete Product Highlights', link: '/add-product-highlights'},
+            {name:'Add/Update/Delete Product Specifications',link:'/add-specifications'},
+            { name:'Update Product', link:'/update-product'}
         ]
     },
     {
@@ -45,27 +46,28 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
             { name:'Delete All Product Category', link: '/delete-product-category'},
             { name:'Delete Products By Id', link: '/delete-product-id'},
             { name:'Delete Product Category By Id', link: '/delete-product-category-id'},
-            { name:'Delete Product Highlight', link: '/delete-product-highlight'},
-            { name:'Delete Product Feature', link: '/delete-product-feature'},
-            { name:'Delete Product Specification', link: '/delete-product-specification'}
+            // { name:'Delete Product Highlight', link: '/delete-product-highlight'},
+            // { name:'Delete Product Feature', link: '/delete-product-feature'},
+            // { name:'Delete Product Specification', link: '/delete-product-specification'}
         ]
     },
-    {
-        Head: "Update Product Submenu",
-        sublink:[
-            { name:'Update Product', link:'/update-product'}
-        ]
-    }
+    // {
+    //     Head: "Update Product Submenu",
+    //     sublink:[
+    //         { name:'Update Product', link:'/update-product'}
+    //     ]
+    // }
     ]
     },
     {name: 'Solutions',mainlink:"", submenu:true, sublinks:[
         {
-            Head: "Add Solution Submenu",
+            Head: "Add/Update Solution Submenu",
             sublink:[
                 { name:'Add Solution', link: '/add-solution'},
-                { name:'Add/Update Solution Feature', link : '/add-solution-features'},
-                { name:'Add/Update Solution Benefits', link: '/add-solution-benefits'},
-                { name:'Add Solution Category', link: '/add-solution-category'}
+                { name:'Add Solution Category', link: '/add-solution-category'},
+                { name:'Add/Update/Delete Solution Feature', link : '/add-solution-features'},
+                { name:'Add/Update/Delete Solution Benefits', link: '/add-solution-benefits'},
+                { name: 'Update Solution', link: '/update-solution'},
             ]
         },
         {
@@ -75,16 +77,16 @@ export const links = [{name: 'Home', mainlink:"/add-admin", submenu:true, sublin
                 { name:'Delete All Solution Category', link: '/delete-solution-category'},
                 { name:'Delete Solution By Id', link : '/delete-solution-id'},
                 { name:'Delete Solution Category By Id', link: '/delete-solution-category-id'},
-                { name:'Delete Solution Feature', link: '/delete-solution-feature'},
-                { name:'Delete Solution Benefit', link: '/delete-solution-benefit'},
+                // { name:'Delete Solution Feature', link: '/delete-solution-feature'},
+                // { name:'Delete Solution Benefit', link: '/delete-solution-benefit'},
             ]
         },
-        {
-            Head: "Update Solution",
-            sublink:[
-                { name: 'Update Solution', link: '/update-solution'},
-            ]
-        }
+        // {
+        //     Head: "Update Solution",
+        //     sublink:[
+        //         { name: 'Update Solution', link: '/update-solution'},
+        //     ]
+        // }
        
     ]}
 

@@ -229,13 +229,13 @@ function UpdateSolution() {
                                         <div class="inputfield">
                                             <input type="submit" value="Register" onClick={handleClick} class="btn" />
                                         </div>
-                                        <div class="inputfield">
+                                        {/* <div class="inputfield">
                                             <input type="submit" value="Add Benefits" onClick={handleClick1} class="btn" />
                                         </div>
 
                                         <div class="inputfield">
                                             <input type="submit" value="Add Features" onClick={handleClick2} class="btn" />
-                                        </div>
+                                        </div> */}
                                     </>)}
 
 
@@ -257,10 +257,10 @@ function UpdateSolution() {
                     />
                     {/* <AddBenefits/>
     <AddFeatures/> */}
-                    {(clicked1) ? (<AddBenefits />
+                    {/* {(clicked1) ? (<AddBenefits />
                     ) : (null)}
                     {(clicked2) ? (<AddFeatures />
-                    ) : (null)}
+                    ) : (null)} */}
                 </>) : (<><h1>Error: Not Logged IN</h1></>)
             }
 

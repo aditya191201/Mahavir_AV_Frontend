@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import AdminNavbar from './Admin Navbar/AdminNavbar';
 import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 var modelNum = "";
 var head = "";
@@ -80,6 +80,32 @@ function AddSpecs() {
 
    }
 
+   const handleDelete = () => {
+      axios.delete(url + "/deleteProductSpecs/" + modelNum + "/" + head, {
+         headers: {
+           "Content-Type": "multipart/form-data",
+           "Authorization": "Bearer " + token
+         }
+       }).then(function (response) {
+         if (response.status == 200) {
+           console.log("DELETE", "Product Specification")
+           isClicked(true)
+           toast('Product Specification Deleted Successfully', {
+             position: "bottom-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "dark",
+           });
+         }
+       }).catch(function (error) {
+         console.log("Error", error)
+       })
+   }
+
    return (
       <>
          {
@@ -104,6 +130,7 @@ function AddSpecs() {
                               <textarea class="textarea" onChange={handleValue}  > </textarea>
                            </div>
                            <FontAwesomeIcon icon={faPlus} onClick={handleClick} style={{marginTop: "50px",marginLeft: "50px"}}/>
+                           <FontAwesomeIcon icon={faTrash} style={{marginTop:"50px" , marginLeft: "20px"}} onClick={handleDelete}/>
                         </div>
                         {(clicked) ? (<AddSpecs/>) : (null)}
                        

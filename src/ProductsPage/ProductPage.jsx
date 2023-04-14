@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Footer from '../FooterPage/Footer';
 import Navbar from '../Navbar/Navbar';
 import url from '../Url';
-import DownloadBroucher from './DownloadBroucher1';
 import ImageSlider from './ImageSlider';
 import ProductData from './ProductData';
 import ProductFeature from './ProductFeature';
@@ -134,7 +133,7 @@ function ProductPage() {
         {(products1.productDescriptions != null) ? (
           <ProductFeature />
         ) : (null)}
-        br
+        <br />
         <div>
           <div className="download-broucher">
             <button onClick={() => { downloadFileAtURL(products1.brochureLink) }} >

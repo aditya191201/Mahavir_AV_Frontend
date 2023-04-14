@@ -9,7 +9,7 @@ import AdminNavbar from './Admin Navbar/AdminNavbar';
 import { useState } from 'react';
 import url from '../Url';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
 var title = ""
 var description = ""
 var coverimg = ""
@@ -77,6 +77,33 @@ function AddFeatureForm1() {
       
    }
 
+   const handleDelete = () => {
+      axios.delete(url + "/deletesolutionfeatures/" + name + "/" + title, {
+         headers: {
+           "Content-Type": "multipart/form-data",
+           "Authorization": "Bearer " + token
+         }
+       }).then(function (response) {
+         if (response.status == 200) {
+           console.log("DELETE", "Solution Feature")
+           isClicked(true)
+           toast('Solution Feature Deleted Successfully', {
+             position: "bottom-right",
+             autoClose: 5000,
+             hideProgressBar: false,
+             closeOnClick: true,
+             pauseOnHover: true,
+             draggable: true,
+             progress: undefined,
+             theme: "dark",
+           });
+         }
+       }).catch(function (error) {
+         console.log("Error", error)
+       })
+   }
+
+
    return (
       <>
          {
@@ -99,6 +126,8 @@ function AddFeatureForm1() {
                               <input type="text" onChange={handleCoverimg} class="input" placeholder='Icon URL' style={{marginLeft:"20px"}}/>
                            </div>
                            <FontAwesomeIcon icon={faPlus} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleClick}/>
+                           <FontAwesomeIcon icon={faTrash} style={{marginTop:"10px" , marginLeft: "20px"}} onClick={handleDelete}/>
+
                         </div>
                         {(clicked) ? (<AddFeatureForm1/>) : (null)}
 

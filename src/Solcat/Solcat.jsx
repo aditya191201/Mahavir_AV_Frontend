@@ -4,7 +4,6 @@ import { useState } from "react";
 import styles from "../aboutus/Picture.module.css";
 import axios from "axios";
 import '../Solution/benefit-card-comp.css';
-import BCard from "../Solution/benefit-card-comp";
 import Navbar from "../Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
 import './solcat.css';

@@ -267,16 +267,16 @@ function UpdateProduct() {
                                             </div>
                                             <div>
                                                 <div class="inputfield">
-                                                    <input type="submit" value="Add Feature" onClick={handleClick1} class="btn" />
+                                                    <input type="submit" value="Add/Update Feature" onClick={handleClick1} class="btn" />
                                                 </div>
                                                 {(clicked) ? (<AddProductFeatureForm />
                                                 ) : (null)}
                                                 <div class="inputfield">
-                                                    <input type="submit" value="Add Highlight" onClick={handleClick2} class="btn" />
+                                                    <input type="submit" value="Add/Update Highlight" onClick={handleClick2} class="btn" />
                                                 </div>
                                                 {(clicked1) ? (<AddProductHighlightsForm />) : (null)}
                                                 <div class="inputfield">
-                                                    <input type="submit" value="Add Specifications" onClick={handleClick3} class="btn" />
+                                                    <input type="submit" value="Add/Update Specifications" onClick={handleClick3} class="btn" />
                                                 </div>
                                                 {(clicked3) ? (<AddSpecs />) : (null)}
                                             </div>

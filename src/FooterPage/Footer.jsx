@@ -1,13 +1,10 @@
 import React from 'react';
 import './Animations.css';
 import './headcontent.css';
-import { GoLocation } from 'react-icons/go';
-import { GoMail } from 'react-icons/go';
+import { GoLocation, GoMail} from 'react-icons/go';
 import { BiPhone, BiRupee } from 'react-icons/bi';
-import { ImClock } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
-import { faIndianRupeeSign, faRupee, faRupeeSign } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Footer(){
   const navigate = useNavigate()
   
