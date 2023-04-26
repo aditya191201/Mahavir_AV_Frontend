@@ -12,7 +12,7 @@ return(
         <img href = "#" src = {image}/>
       </div>
       <div class = "ccontent">
-        <h1 style={{ fontSize: "20px"  }}>{name}</h1>
+        <h1 style={{ fontSize: "20px", fontWeight:"600"}}>{name}</h1>
         <p>{description}</p>
       </div>
     </div>    
