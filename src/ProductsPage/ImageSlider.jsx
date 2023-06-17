@@ -9,8 +9,7 @@ function ImageSlider() {
     const imgs=[
       {id:0, value: localStorage.getItem("img")},
       {id:1, value: localStorage.getItem("image2")},
-      {id:2, value: localStorage.getItem("image3")},
-      
+      {id:2, value: localStorage.getItem("image3")}
     ]
 
     
@@ -65,9 +64,9 @@ function ImageSlider() {
         </div>
         
         </div>
-        <div className="row">
+        {/* <div className="row">
             <h1>{localStorage.getItem("productname")}</h1>
-        </div>
+        </div> */}
       </div>
       </>
     );

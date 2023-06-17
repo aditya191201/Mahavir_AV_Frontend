@@ -39,12 +39,13 @@
     justify-content: center;
     display: flex;
     padding-top: 20px;
+    height: 100px;
   }
   
 .thumbnail{
-  padding-left: 20px;
+  /* padding-left: 20px;
   height: 70px !important;
-  width: auto;
+  width: auto; */
 }
 .thumbnail img{
     height: 100px;

@@ -80,25 +80,21 @@ function ProductPage() {
       {/* <ProductMain/> */}
       {/* <NewTrial/> */}
       <div className="product-total">
-        <ImageSlider />
-        {(products1.productHighlights != "") ? (
-          <div>
-            <div className="product_desc">
-              <p>
-                {products1.productHighlights}
-              </p>
-            </div>
-          </div>
-        ) : (null)}
-
         <div className="section-container">
 
           {(products1.additionalFeatures != null) ? (
             <>
-              <div className="columns image1">
-                <img src={products1.productImage1} alt="" />
+              <div className="">
+                {/* <img src={products1.productImage1} alt="" /> */}
+                <ImageSlider />
               </div>
               <div className="producthigh">
+                <div className="product-title">
+                  {products1.productName}
+                </div>
+                <br /><br />
+                <h2 style={{fontSize:"30px", color:"red"}}>Rs. {products1.productPrice}</h2>
+                <br />
                 <h1>Product Highlights</h1>
                 {
                   products1.additionalFeatures.map(feature => (
@@ -127,9 +123,23 @@ function ProductPage() {
             </>
           ) : (null)}
         </div>
-        
-        
-
+       <br />
+        {/* {(products1.productVideoLink != "") ? (
+          <div className="youtube-container">
+            <iframe src={products1.productVideoLink} className="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br />
+          </div>
+        ) : (null)} */}
+      
+      {(products1.productHighlights != "") ? (
+                <div>
+                  <div className="product_desc">
+                    <p>
+                      {products1.productHighlights}
+                    </p>
+                  </div>
+                </div>
+              ) : (null)}
         {(products1.productDescriptions != null) ? (
           <ProductFeature />
         ) : (null)}
@@ -162,14 +172,9 @@ function ProductPage() {
             </div>
           </>) : (null)
         }
-        <br /><br />
-        {(products1.productVideoLink != "") ? (
-          <div className="youtube-container">
-            <iframe src={products1.productVideoLink} className="yt-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <br />
-          </div>
-        ) : (null)}
-        <br /><br />
+       
+        
+        <br />
         <div>
           <Footer />
         </div>
